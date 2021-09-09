@@ -9,8 +9,8 @@ namespace Laba2
     {
         private static void Main()
         {
-            //Types();
-             Strings();
+            Types();
+            // Strings();
             // Arrays();
             // Tuples();
             // Console.WriteLine(LocalFunction());
@@ -152,26 +152,26 @@ namespace Laba2
         {
             //a
 
-            var str_1 = "god ";
-            var str_2 = "save ";
-            var str_3 = "the queen";
-            var str_4 = "My house is here";
+            var stringFirstVar = "I ";
+            var stringSecondVar = "Love ";
+            var stringThirdVar = "OOP";
+            var stringFourthVar = "My house is here";
 
-            Console.WriteLine($"{str_1 == str_2}");
+            Console.WriteLine($"{stringFirstVar == stringSecondVar}");
 
             //b
 
-            Console.WriteLine($"{string.Concat(str_1, str_2, str_3)} - concatenation");
+            Console.WriteLine($"{string.Concat(stringFirstVar, stringSecondVar, stringThirdVar)} - concatenation");
 
-            Console.WriteLine($"{string.Copy(str_2)} - copying");
+            Console.WriteLine($"{string.Copy(stringSecondVar)} - copying");
 
-            Console.WriteLine($"{str_2.Substring(0, 3)} - substring");
+            Console.WriteLine($"{stringSecondVar.Substring(0, 3)} - substring");
 
-            string[] Words = str_3.Split(new[] { ' ' });
+            string[] Words = stringFourthVar.Split(new[] { ' ' });
             foreach (string word in Words) Console.Write($"{word} | ");
 
-            Console.WriteLine($"\nInsert:{str_1.Insert(2, str_2)}");
-            Console.WriteLine($"Remove:{str_3.Remove(0, 9)}");
+            Console.WriteLine($"\nInsert:{stringFirstVar.Insert(2, stringSecondVar)}");
+            Console.WriteLine($"Remove:{stringFourthVar.Remove(0, 9)}");
 
             //TODO интерполяцию забыл,но я её постоянно использую по коду,так что норм
 
