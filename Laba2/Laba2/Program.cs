@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
+
 //BRUH
 namespace Laba2
 {
@@ -10,41 +11,59 @@ namespace Laba2
         {
             //Types();
             // Strings();
-            // Arrays();
-            // Tuples();
-            // Console.WriteLine(LocalFunction());
-            // FunctionWithChecked();
-            FunctionWithUnchecked();
+            //Arrays();
+            //Tuples();
+            int[] arrVar = new int[] { 5, 3, 12, 42, -23 };
+            string strVar = "ABCD";
+            /*Console.WriteLine(LocalFunction(arrVar, strVar));*/
+            FunctionWithChecked();
+            /*FunctionWithUnchecked();*/
             Console.ReadKey();
         }
 
         private static void Types()
         {
             //a
-            var boolVar = false;
+            bool boolVar = false;
             byte byteVar = 1;
             sbyte sbyteVar = -1;
-            var charVar = 'a';
-            var decimalVar = decimal.MaxValue;
-            var doubleVar = 1.32;
-            var floatVar = 1.32f;
+            char charVar = 'a';
+            decimal decimalVar = decimal.MaxValue;
+            double doubleVar = 1.32;
+            float floatVar = 1.32f;
             int intVar = -123;
             uint uintVar = 123;
-            var nintVar = nint.MinValue;
-            var nuintVar = nuint.MinValue;
-            var longVar = long.MaxValue;
-            var ulongVar = ulong.MaxValue;
-            var shortVar = short.MaxValue;
-            var ushortVar = ushort.MaxValue;
-            var stringVar = "AAA";
+            nint nintVar = nint.MinValue;
+            nuint nuintVar = nuint.MinValue;
+            long longVar = long.MaxValue;
+            ulong ulongVar = ulong.MaxValue;
+            short shortVar = short.MaxValue;
+            ushort ushortVar = ushort.MaxValue;
+            string stringVar = "AAA";
             object objectVar = null;
 
             Console.WriteLine(
-                $"boolVar - {boolVar}\nbyteVar - {byteVar}\nsbyteVar -{sbyteVar}\ncharVar - {charVar}\ndecimalVar - {decimalVar}\ndoubleVar - {doubleVar}\nfloatVar - {floatVar}\nintVar - {intVar}\nuintVar - {uintVar}\nnintVar -{nintVar}\nnuintVAr - {nuintVar}\nlongVar - {longVar}\nulongVar - {ulongVar}\nshortVar - {shortVar}\nushortVar - {ushortVar}\nstringVar - {stringVar}\nobjectVar - {objectVar}");
+                $"boolVar - {boolVar}\n" +
+                $"byteVar - {byteVar}\n" +
+                $"sbyteVar -{sbyteVar}\n" +
+                $"charVar - {charVar}\n" +
+                $"decimalVar - {decimalVar}\n" +
+                $"doubleVar - {doubleVar}\n" +
+                $"floatVar - {floatVar}\n" +
+                $"intVar - {intVar}\n" +
+                $"uintVar - {uintVar}\n" +
+                $"nintVar -{nintVar}\n" +
+                $"nuintVAr - {nuintVar}\n" +
+                $"longVar - {longVar}\n" +
+                $"ulongVar - {ulongVar}\n" +
+                $"shortVar - {shortVar}\n" +
+                $"ushortVar - {ushortVar}\n" +
+                $"stringVar - {stringVar}\n" +
+                $"objectVar - {objectVar}");
 
             Console.WriteLine("-------------");
 
-            boolVar = bool.Parse(Console.ReadLine());
+            /*boolVar = bool.Parse(Console.ReadLine());
             byteVar = byte.Parse(Console.ReadLine());
             sbyteVar = sbyte.Parse(Console.ReadLine());
             charVar = char.Parse(Console.ReadLine());
@@ -60,20 +79,35 @@ namespace Laba2
             shortVar = short.Parse(Console.ReadLine());
             ushortVar = ushort.Parse(Console.ReadLine());
             stringVar = Console.ReadLine();
-            objectVar = Console.ReadLine();
+            objectVar = Console.ReadLine();*/
 
             Console.WriteLine("-------------");
             Console.WriteLine(
-                $"boolVar - {boolVar}\nbyteVar - {byteVar}\nsbyteVar -{sbyteVar}\ncharVar - {charVar}\ndecimalVar - {decimalVar}\ndoubleVar - {doubleVar}\nfloatVar - {floatVar}\nintVar - {intVar}\nuintVar - {uintVar}\nnintVar -{nintVar}\nnuintVAr - {nuintVar}\nlongVar - {longVar}\nulongVar - {ulongVar}\nshortVar - {shortVar}\nushortVar - {ushortVar}\nstringVar - {stringVar}\nobjectVar - {objectVar}");
-
+                $"boolVar - {boolVar}\n" +
+                $"byteVar - {byteVar}\n" +
+                $"sbyteVar -{sbyteVar}\n" +
+                $"charVar - {charVar}\n" +
+                $"decimalVar - {decimalVar}\n" +
+                $"doubleVar - {doubleVar}\n" +
+                $"floatVar - {floatVar}\n" +
+                $"intVar - {intVar}\n" +
+                $"uintVar - {uintVar}\n" +
+                $"nintVar -{nintVar}\n" +
+                $"nuintVAr - {nuintVar}\n" +
+                $"longVar - {longVar}\n" +
+                $"ulongVar - {ulongVar}\n" +
+                $"shortVar - {shortVar}\n" +
+                $"ushortVar - {ushortVar}\n" +
+                $"stringVar - {stringVar}\n" +
+                $"objectVar - {objectVar}");
             //b
 
             //Explicit Casting
             intVar = 'a';
-            charVar = (char) intVar;
-            shortVar = (short) ushortVar;
-            longVar = intVar;
-            doubleVar = floatVar;
+            charVar = (char)intVar;
+            shortVar = (short)ushortVar;
+            longVar = (long)intVar;
+            doubleVar = (double)floatVar;
 
             Console.WriteLine(
                 $"intVar - {intVar}\ncharVar - {charVar}\nshortVar - {shortVar}\nlongVar - {longVar}\ndoubleVar - {doubleVar}\n----------\n");
@@ -84,10 +118,11 @@ namespace Laba2
             doubleVar = floatVar;
             decimalVar = intVar;
             floatVar = intVar;
+            //convert
+            stringVar = Convert.ToString(boolVar);
 
             Console.WriteLine(
-                $"intVar - {intVar}\nlongVar - {longVar}\nlongVar - {longVar}\ndoubleVar - {doubleVar}decimalVar - {decimalVar}\nfloatVar - {floatVar}\n----------\n");
-
+                $"intVar - {intVar}\nlongVar - {longVar}\nlongVar - {longVar}\ndoubleVar - {doubleVar}\ndecimalVar - {decimalVar}\nfloatVar - {floatVar} \n{stringVar} - stringVar \n----------\n");
 
             //c and d
 
@@ -95,9 +130,9 @@ namespace Laba2
             var intObj = new object();
             intObj = intVar;
             intObj = 15;
-            intVar = (int) intObj;
+            intVar = (int)intObj;
 
-            //e 
+            //e
 
             //Nullable;
             int? intNullableVar = null;
@@ -118,28 +153,26 @@ namespace Laba2
         {
             //a
 
-            var stringFirstVar = "I ";
-            var stringSecondVar = "Love ";
-            var stringThirdVar = "OOP";
-            var stringFourthVar = "My house is here";
+            var str_1 = "god ";
+            var str_2 = "save ";
+            var str_3 = "the queen";
+            var str_4 = "My house is here";
 
-            Console.WriteLine($"{stringFirstVar == stringSecondVar}");
+            Console.WriteLine($"{str_1 == str_2}");
 
             //b
 
-            Console.WriteLine($"{string.Concat(stringFirstVar, stringSecondVar, stringThirdVar)} - concatenation");
+            Console.WriteLine($"{string.Concat(str_1, str_2, str_3)} - concatenation");
 
-            Console.WriteLine($"{string.Copy(stringSecondVar)} - copying");
+            Console.WriteLine($"{string.Copy(str_2)} - copying");
 
-            Console.WriteLine($"{stringSecondVar.Substring(0, 3)} - substring");
+            Console.WriteLine($"{str_2.Substring(0, 3)} - substring");
 
-            string[] Words = stringFourthVar.Split(new[] {' '});
+            string[] Words = str_3.Split(' ');
             foreach (string word in Words) Console.Write($"{word} | ");
 
-            Console.WriteLine($"\nInsert:{stringFirstVar.Insert(2, stringSecondVar)}");
-            Console.WriteLine($"Remove:{stringFourthVar.Remove(0, 9)}");
-            
-            //TODO интерполяцию забыл,но я её постоянно использую по коду,так что норм
+            Console.WriteLine($"\nInsert:{str_1.Insert(2, str_2)}");
+            Console.WriteLine($"Remove:{str_3.Remove(0, 2)}");
 
             //c
 
@@ -154,11 +187,11 @@ namespace Laba2
             Console.WriteLine($"{string.IsNullOrWhiteSpace(stringWhiteSpaceVar)}");
 
             //d
-            var stringBuilderVar = new StringBuilder(" travels 123 fastest who travels");
-            stringBuilderVar.Append(" alone ");
-            stringBuilderVar.Insert(0, "He");
-            stringBuilderVar.Remove(11, 4);
-            Console.WriteLine(stringBuilderVar);
+            var stringBuilder = new StringBuilder("Lorem ipsum dolor sit amet,");
+            stringBuilder.Append("Nullam");
+            stringBuilder.Insert(0, "eget ");
+            stringBuilder.Remove(7, 9);
+            Console.WriteLine(stringBuilder);
         }
 
         private static void Arrays()
@@ -171,21 +204,26 @@ namespace Laba2
                 {5, 6, 7},
                 {9, 10, 11}
             };
-            Console.WriteLine("double array: ");
-            for (var i = 0; i < arr.GetLength(0); i++)
+
+            int rows = arr.GetUpperBound(0) + 1;
+            int columns = arr.Length / rows;
+
+            for (int i = 0; i < rows; i++)
             {
-                for (var j = 0; j < arr.GetLength(1); j++) Console.Write($"{arr[i, j]}  ");
+                for (int j = 0; j < columns; j++)
+                {
+                    Console.Write($"{arr[i, j]} \t");
+                }
                 Console.WriteLine();
             }
 
             //b
-            var stringArr = new[] {"AAA", "BBB", "CCC"};
+            var stringArr = new[] { "AAA", "BBB", "CCC" };
             foreach (string item in stringArr) Console.Write($"{item} | ");
 
             Console.WriteLine($"\n Length of array - {stringArr.Length}");
 
-
-            Console.Write("Input number elem for replace: ");
+            Console.Write("Input number of elem to replace: ");
             int number = int.Parse(Console.ReadLine());
             if (number >= stringArr.Length)
                 throw new ArgumentOutOfRangeException();
@@ -197,23 +235,24 @@ namespace Laba2
                 if (i == number)
                     stringArr[i] = newElem;
             foreach (string item in stringArr) Console.Write($"{item} | ");
-            
+
             Console.WriteLine();
             //c
             int[][] arr2 = new int[3][];
             arr2[0] = new int[2];
             arr2[1] = new int[3];
             arr2[2] = new int[4];
-            
+            Random rnd = new Random();
+
             for (int i = 0; i < arr2.Length; i++)
             {
                 for (int j = 0; j < arr2[i].Length; j++)
                 {
-                    arr2[i][j] = int.Parse(Console.ReadLine());
+                    arr2[i][j] = rnd.Next(1, 1000);
                 }
                 Console.WriteLine();
             }
-            
+
             for (int i = 0; i < arr2.Length; i++)
             {
                 for (int j = 0; j < arr2[i].Length; j++)
@@ -222,12 +261,11 @@ namespace Laba2
                 }
                 Console.WriteLine();
             }
-            
-            //d 
 
-            var arrayVar = new int[] {1, 2, 3, 4};
+            //d
+
+            var arrayVar = new int[] { 1, 2, 3, 4 };
             var stringVar = "absc";
-
         }
 
         private static void Tuples()
@@ -235,13 +273,13 @@ namespace Laba2
             //a
             (int, string, char, string, ulong) tupleFirstVar = (-7, "BBBB", 't', "AAAA", 66666);
             (int, string, char, string, ulong) tupleSecondVar = (-3, "BBBB", 't', "AAAA", 66666);
-            
+
             //b
             Console.WriteLine(tupleFirstVar);
             Console.WriteLine(tupleFirstVar.Item1);
             Console.WriteLine(tupleFirstVar.Item3);
             Console.WriteLine(tupleFirstVar.Item4);
-            
+
             //c
             int intVar = tupleFirstVar.Item1;
             string stringFirstVar = tupleFirstVar.Item2;
@@ -250,22 +288,19 @@ namespace Laba2
             ulong ulongVar = tupleFirstVar.Item5;
 
             (intVar, stringFirstVar, charVar, stringSecondVar, ulongVar) = tupleFirstVar;
-            
-            //TODO Продемонстрируйте использование переменной ( _ ). (доступно начиная с C#7.3) 
-            
-            //d 
-            Console.WriteLine($"{tupleFirstVar==tupleSecondVar}");
+            var (_, pop, _) = ("new york", 8175133, 468.48);
+            Console.WriteLine(pop);
+            //d
+            Console.WriteLine(tupleFirstVar == tupleSecondVar);
         }
-        
-        private static (int, int, int, char) LocalFunction()
+
+        private static (int, int, int, char) LocalFunction(int[] arrVar, string strVar)
         {
-            int[] arrVar = new int[] { 5,3,12,42,-23 };
-            string strVar = "ABCD";
             int maxArrayElement = arrVar.Max();
             int minArrayElement = arrVar.Min();
             int arrayElementsSum = arrVar.Sum();
             char firstStringChar = strVar[0];
-            return  (maxArrayElement,minArrayElement,arrayElementsSum,firstStringChar); 
+            return (maxArrayElement, minArrayElement, arrayElementsSum, firstStringChar);
         }
 
         private static void FunctionWithChecked()
@@ -277,7 +312,7 @@ namespace Laba2
                 Console.WriteLine(intVar);
             }
         }
-        
+
         private static void FunctionWithUnchecked()
         {
             unchecked
@@ -287,6 +322,5 @@ namespace Laba2
                 Console.WriteLine(intVar);
             }
         }
-        
     }
 }
