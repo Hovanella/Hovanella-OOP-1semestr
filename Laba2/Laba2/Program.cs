@@ -10,14 +10,12 @@ namespace Laba2
         private static void Main()
         {
             //Types();
-            // Strings();
-            //Arrays();
-            //Tuples();
-            int[] arrVar = new int[] { 5, 3, 12, 42, -23 };
-            string strVar = "ABCD";
-            /*Console.WriteLine(LocalFunction(arrVar, strVar));*/
-            FunctionWithChecked();
-            /*FunctionWithUnchecked();*/
+             Strings();
+            // Arrays();
+            // Tuples();
+            // Console.WriteLine(LocalFunction());
+            // FunctionWithChecked();
+            FunctionWithUnchecked();
             Console.ReadKey();
         }
 
@@ -107,7 +105,7 @@ namespace Laba2
             charVar = (char)intVar;
             shortVar = (short)ushortVar;
             longVar = (long)intVar;
-            doubleVar = (double)floatVar;
+            doubleVar =(double)floatVar;
 
             Console.WriteLine(
                 $"intVar - {intVar}\ncharVar - {charVar}\nshortVar - {shortVar}\nlongVar - {longVar}\ndoubleVar - {doubleVar}\n----------\n");
@@ -120,6 +118,7 @@ namespace Laba2
             floatVar = intVar;
             //convert
             stringVar = Convert.ToString(boolVar);
+
 
             Console.WriteLine(
                 $"intVar - {intVar}\nlongVar - {longVar}\nlongVar - {longVar}\ndoubleVar - {doubleVar}\ndecimalVar - {decimalVar}\nfloatVar - {floatVar} \n{stringVar} - stringVar \n----------\n");
@@ -168,7 +167,7 @@ namespace Laba2
 
             Console.WriteLine($"{str_2.Substring(0, 3)} - substring");
 
-            string[] Words = str_3.Split(' ');
+            string[] Words = str_3.Split( ' ' );
             foreach (string word in Words) Console.Write($"{word} | ");
 
             Console.WriteLine($"\nInsert:{str_1.Insert(2, str_2)}");
@@ -189,7 +188,7 @@ namespace Laba2
             //d
             var stringBuilder = new StringBuilder("Lorem ipsum dolor sit amet,");
             stringBuilder.Append("Nullam");
-            stringBuilder.Insert(0, "eget ");
+            stringBuilder.Insert(0,"eget ");
             stringBuilder.Remove(7, 9);
             Console.WriteLine(stringBuilder);
         }
@@ -204,16 +203,10 @@ namespace Laba2
                 {5, 6, 7},
                 {9, 10, 11}
             };
-
-            int rows = arr.GetUpperBound(0) + 1;
-            int columns = arr.Length / rows;
-
-            for (int i = 0; i < rows; i++)
+            Console.WriteLine("double array: ");
+            for (var i = 0; i < arr.GetLength(0); i++)
             {
-                for (int j = 0; j < columns; j++)
-                {
-                    Console.Write($"{arr[i, j]} \t");
-                }
+                for (var j = 0; j < arr.GetLength(1); j++) Console.Write($"{arr[i, j]}  ");
                 Console.WriteLine();
             }
 
@@ -223,7 +216,7 @@ namespace Laba2
 
             Console.WriteLine($"\n Length of array - {stringArr.Length}");
 
-            Console.Write("Input number of elem to replace: ");
+            Console.Write("Input number elem for replace: ");
             int number = int.Parse(Console.ReadLine());
             if (number >= stringArr.Length)
                 throw new ArgumentOutOfRangeException();
@@ -242,13 +235,12 @@ namespace Laba2
             arr2[0] = new int[2];
             arr2[1] = new int[3];
             arr2[2] = new int[4];
-            Random rnd = new Random();
 
             for (int i = 0; i < arr2.Length; i++)
             {
                 for (int j = 0; j < arr2[i].Length; j++)
                 {
-                    arr2[i][j] = rnd.Next(1, 1000);
+                    arr2[i][j] = int.Parse(Console.ReadLine());
                 }
                 Console.WriteLine();
             }
@@ -288,14 +280,17 @@ namespace Laba2
             ulong ulongVar = tupleFirstVar.Item5;
 
             (intVar, stringFirstVar, charVar, stringSecondVar, ulongVar) = tupleFirstVar;
-            var (_, pop, _) = ("new york", 8175133, 468.48);
-            Console.WriteLine(pop);
+
+            //TODO Продемонстрируйте использование переменной ( _ ). (доступно начиная с C#7.3)
+
             //d
-            Console.WriteLine(tupleFirstVar == tupleSecondVar);
+            Console.WriteLine($"{tupleFirstVar == tupleSecondVar}");
         }
 
-        private static (int, int, int, char) LocalFunction(int[] arrVar, string strVar)
+        private static (int, int, int, char) LocalFunction()
         {
+            int[] arrVar = new int[] { 5, 3, 12, 42, -23 };
+            string strVar = "ABCD";
             int maxArrayElement = arrVar.Max();
             int minArrayElement = arrVar.Min();
             int arrayElementsSum = arrVar.Sum();
