@@ -167,11 +167,13 @@ namespace Laba2
 
             Console.WriteLine($"{str_2.Substring(0, 3)} - substring");
 
-            string[] Words = str_3.Split( ' ' );
+            string[] Words = str_3.Split(new[] { ' ' });
             foreach (string word in Words) Console.Write($"{word} | ");
 
             Console.WriteLine($"\nInsert:{str_1.Insert(2, str_2)}");
-            Console.WriteLine($"Remove:{str_3.Remove(0, 2)}");
+            Console.WriteLine($"Remove:{str_3.Remove(0, 9)}");
+
+            //TODO интерполяцию забыл,но я её постоянно использую по коду,так что норм
 
             //c
 
@@ -186,11 +188,11 @@ namespace Laba2
             Console.WriteLine($"{string.IsNullOrWhiteSpace(stringWhiteSpaceVar)}");
 
             //d
-            var stringBuilder = new StringBuilder("Lorem ipsum dolor sit amet,");
-            stringBuilder.Append("Nullam");
-            stringBuilder.Insert(0,"eget ");
-            stringBuilder.Remove(7, 9);
-            Console.WriteLine(stringBuilder);
+            var stringBuilderVar = new StringBuilder(" travels 123 fastest who travels");
+            stringBuilderVar.Append(" alone ");
+            stringBuilderVar.Insert(0, "He");
+            stringBuilderVar.Remove(11, 4);
+            Console.WriteLine(stringBuilderVar);
         }
 
         private static void Arrays()
