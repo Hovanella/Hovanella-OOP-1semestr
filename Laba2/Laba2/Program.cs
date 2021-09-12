@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
-
+//BRUH
 namespace Laba2
 {
     internal static class Program
@@ -26,7 +26,7 @@ namespace Laba2
         private static void Types()
         {
             //a
-            var boolVar = true;
+            var boolVar = false;
             byte byteVar = 1;
             sbyte sbyteVar = -1;
             var charVar = 'a';
