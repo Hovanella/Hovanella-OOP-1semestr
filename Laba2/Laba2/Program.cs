@@ -8,13 +8,18 @@ namespace Laba2
     {
         private static void Main()
         {
-            //Types();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Types();
             // Strings();
             // Arrays();
             // Tuples();
-            // Console.WriteLine(LocalFunction());
+            
+            // int[] arrVar =new int[] {5, 3, 12, 42, -23};
+            // var strVar = "ABCD";
+            // Console.WriteLine(LocalFunction(arrVar,strVar));
+            
             // FunctionWithChecked();
-            FunctionWithUnchecked();
+           // FunctionWithUnchecked();  
             Console.ReadKey();
         }
 
@@ -138,7 +143,7 @@ namespace Laba2
 
             Console.WriteLine($"\nInsert:{stringFirstVar.Insert(2, stringSecondVar)}");
             Console.WriteLine($"Remove:{stringFourthVar.Remove(0, 9)}");
-            
+
             //TODO интерполяцию забыл,но я её постоянно использую по коду,так что норм
 
             //c
@@ -197,37 +202,30 @@ namespace Laba2
                 if (i == number)
                     stringArr[i] = newElem;
             foreach (string item in stringArr) Console.Write($"{item} | ");
-            
+
             Console.WriteLine();
             //c
-            int[][] arr2 = new int[3][];
+            var arr2 = new int[3][];
             arr2[0] = new int[2];
             arr2[1] = new int[3];
             arr2[2] = new int[4];
-            
-            for (int i = 0; i < arr2.Length; i++)
+
+            for (var i = 0; i < arr2.Length; i++)
             {
-                for (int j = 0; j < arr2[i].Length; j++)
-                {
-                    arr2[i][j] = int.Parse(Console.ReadLine());
-                }
+                for (var j = 0; j < arr2[i].Length; j++) arr2[i][j] = int.Parse(Console.ReadLine());
                 Console.WriteLine();
             }
-            
-            for (int i = 0; i < arr2.Length; i++)
+
+            for (var i = 0; i < arr2.Length; i++)
             {
-                for (int j = 0; j < arr2[i].Length; j++)
-                {
-                    Console.Write($"{arr2[i][j]} ");
-                }
+                for (var j = 0; j < arr2[i].Length; j++) Console.Write($"{arr2[i][j]} ");
                 Console.WriteLine();
             }
-            
+
             //d 
 
-            var arrayVar = new int[] {1, 2, 3, 4};
+            var arrayVar = new[] {1, 2, 3, 4};
             var stringVar = "absc";
-
         }
 
         private static void Tuples()
@@ -235,13 +233,13 @@ namespace Laba2
             //a
             (int, string, char, string, ulong) tupleFirstVar = (-7, "BBBB", 't', "AAAA", 66666);
             (int, string, char, string, ulong) tupleSecondVar = (-3, "BBBB", 't', "AAAA", 66666);
-            
+
             //b
             Console.WriteLine(tupleFirstVar);
             Console.WriteLine(tupleFirstVar.Item1);
             Console.WriteLine(tupleFirstVar.Item3);
             Console.WriteLine(tupleFirstVar.Item4);
-            
+
             //c
             int intVar = tupleFirstVar.Item1;
             string stringFirstVar = tupleFirstVar.Item2;
@@ -250,43 +248,39 @@ namespace Laba2
             ulong ulongVar = tupleFirstVar.Item5;
 
             (intVar, stringFirstVar, charVar, stringSecondVar, ulongVar) = tupleFirstVar;
-            
+
             //TODO Продемонстрируйте использование переменной ( _ ). (доступно начиная с C#7.3) 
-            
+
             //d 
-            Console.WriteLine($"{tupleFirstVar==tupleSecondVar}");
+            Console.WriteLine($"{tupleFirstVar == tupleSecondVar}");
         }
-        
-        private static (int, int, int, char) LocalFunction()
-        {
-            int[] arrVar = new int[] { 5,3,12,42,-23 };
-            string strVar = "ABCD";
+
+        private static (int, int, int, char) LocalFunction (int[] arrVar, string strVar)  {
             int maxArrayElement = arrVar.Max();
             int minArrayElement = arrVar.Min();
             int arrayElementsSum = arrVar.Sum();
             char firstStringChar = strVar[0];
-            return  (maxArrayElement,minArrayElement,arrayElementsSum,firstStringChar); 
+            return (maxArrayElement, minArrayElement, arrayElementsSum, firstStringChar);
         }
 
         private static void FunctionWithChecked()
         {
             checked
             {
-                int intVar = int.MaxValue;
+                var intVar = int.MaxValue;
                 intVar++;
                 Console.WriteLine(intVar);
             }
         }
-        
+
         private static void FunctionWithUnchecked()
         {
             unchecked
             {
-                int intVar = int.MaxValue;
+                var intVar = int.MaxValue;
                 intVar++;
                 Console.WriteLine(intVar);
             }
         }
-        
     }
 }

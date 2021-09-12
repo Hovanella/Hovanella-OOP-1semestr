@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Образование\\C#\\OOP1Semestr\\Laba2\\Laba2\\Laba2.csproj": {}
+    "D:\\Образование\\3Semester\\OOP\\OOP1Semestr\\Laba2\\Laba2\\Laba2.csproj": {}
   },
   "projects": {
-    "D:\\Образование\\C#\\OOP1Semestr\\Laba2\\Laba2\\Laba2.csproj": {
+    "D:\\Образование\\3Semester\\OOP\\OOP1Semestr\\Laba2\\Laba2\\Laba2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Образование\\C#\\OOP1Semestr\\Laba2\\Laba2\\Laba2.csproj",
+        "projectUniqueName": "D:\\Образование\\3Semester\\OOP\\OOP1Semestr\\Laba2\\Laba2\\Laba2.csproj",
         "projectName": "Laba2",
-        "projectPath": "D:\\Образование\\C#\\OOP1Semestr\\Laba2\\Laba2\\Laba2.csproj",
+        "projectPath": "D:\\Образование\\3Semester\\OOP\\OOP1Semestr\\Laba2\\Laba2\\Laba2.csproj",
         "packagesPath": "C:\\Users\\Captain\\.nuget\\packages\\",
-        "outputPath": "D:\\Образование\\C#\\OOP1Semestr\\Laba2\\Laba2\\obj\\",
+        "outputPath": "D:\\Образование\\3Semester\\OOP\\OOP1Semestr\\Laba2\\Laba2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
