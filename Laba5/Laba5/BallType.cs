@@ -3,7 +3,7 @@
     public enum BallType
     {
         Default,
-        Baseball,
+        Basketball,
         Tennisball
     }
 }

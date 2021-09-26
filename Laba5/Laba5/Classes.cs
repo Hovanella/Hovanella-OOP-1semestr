@@ -4,15 +4,7 @@ namespace Laba5
 {
     public abstract class Inventory
     {
-        public Inventory()
-        {
-            Name = "Unknown inventory item";
-        }
-        public Inventory(string name)
-        {
-            Name = name;
-        }
-
+        
         public string Name { get; set; }
         public virtual void TakeInventoryItem()
         {
@@ -28,8 +20,9 @@ namespace Laba5
         {
             Name = "Bench";
         }
-        public Bench(string name) : base(name)
+        public Bench(string name)
         {
+            Name = name;
         }
         
         public override void TakeInventoryItem()
@@ -59,8 +52,9 @@ namespace Laba5
         {
             Name = "Bars";
         }
-        public Bars(string name) : base(name)
+        public Bars(string name)
         {
+            Name = name;
         }
         
         public override void TakeInventoryItem()
@@ -86,8 +80,9 @@ namespace Laba5
         {
             Name = "Mats";
         }
-        public Mats(string name) : base(name)
+        public Mats(string name)
         {
+            Name = name;
         }
         
         public override void TakeInventoryItem()
@@ -112,9 +107,9 @@ namespace Laba5
             Name = "Ball";
         }
 
-        public Ball(string name) : base(name)
+        public Ball(string name)
         {
-            
+            Name = name;
         }
 
 
@@ -141,17 +136,17 @@ namespace Laba5
         public BasketballBall()
         {
             Name = "Default";
-            Type = BallType.Baseball;
+            Type = BallType.Basketball;
         }
 
         public BasketballBall(string name)
         {
             Name = name;
-            Type = BallType.Baseball;
+            Type = BallType.Basketball;
         }
         public override string ToString()
         {
-            return $"There is a Ball name - {this.Name}, type - {this.Type}";
+            return $"It's a ball name - {this.Name}, type - {this.Type}";
         }
     }
 
