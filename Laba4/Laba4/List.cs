@@ -25,7 +25,6 @@ namespace Laba4
             }
             
         }
-
         public class Date
         {
             public string CreationDate { get; private set; }

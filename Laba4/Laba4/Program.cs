@@ -85,7 +85,7 @@ namespace Laba4
             myList.Add("BBB");
             myList.Add("CCC");
             Console.WriteLine(StatisticOperation.CountCapacity(myList));
-            Console.WriteLine(StatisticOperation.FindTheMostLongString(myList));
+            Console.WriteLine(StatisticOperation.FindTheLongestString(myList));
             
            
      

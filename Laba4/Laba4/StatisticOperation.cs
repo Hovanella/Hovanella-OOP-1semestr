@@ -18,7 +18,7 @@ namespace Laba4
             return count;
         }
 
-        public static string FindTheMostLongString(List list)
+        public static string FindTheLongestString(List list)
         {
             if (list.Head == null)
                 throw new InvalidOperationException();
