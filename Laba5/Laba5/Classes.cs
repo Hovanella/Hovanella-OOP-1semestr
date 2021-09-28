@@ -2,6 +2,7 @@
 
 namespace Laba5
 {
+    
     public abstract class Inventory
     {
         
@@ -42,7 +43,7 @@ namespace Laba5
 
         public override string ToString()
         {
-            return $"It's a bench name - {this.Name}";
+            return $"It's a {this.GetType()} name - {this.Name}";
         }
     }
 
@@ -69,7 +70,7 @@ namespace Laba5
         
         public override string ToString()
         {
-            return $"It's a bars name - {this.Name}";
+            return $"It's a {this.GetType()} name - {this.Name}";
         }
 
     }       
@@ -96,7 +97,7 @@ namespace Laba5
         }
         public override string ToString()
         {
-            return $"It's a mats name - {this.Name}";
+            return $"It's a {GetType()} name - {this.Name}";
         }
 
     }
@@ -127,7 +128,7 @@ namespace Laba5
 
         public override string ToString()
         {
-            return $"There is a Ball name - {this.Name}, type - {this.Type}";
+            return $"There is a {GetType()} name - {this.Name}, type - {this.Type}";
         }
     }
 
@@ -146,7 +147,7 @@ namespace Laba5
         }
         public override string ToString()
         {
-            return $"It's a ball name - {this.Name}, type - {this.Type}";
+            return $"It's a {GetType()} name - {this.Name}, type - {this.Type}";
         }
     }
 
@@ -170,7 +171,7 @@ namespace Laba5
         }
         public override string ToString()
         {
-            return $"There is a Ball name - {this.Name}, type - {this.Type}";
+            return $"There is a {GetType()} name - {this.Name}, type - {this.Type}";
         }
 
         public override bool Equals(object? obj)
