@@ -16,7 +16,7 @@ namespace Laba3
     {
         //Поля
         private double PI = 3.14;
-        private readonly int busID; 
+        public readonly int busID; 
         private string _busNumber;
        
         

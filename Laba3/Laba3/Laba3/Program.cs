@@ -39,7 +39,7 @@ namespace Laba3
 
             Bus.ChangeBrand(out string brand, "asda");
             bus1.BusBrand = brand;
-            Console.WriteLine(bus1.BusBrand);
+            Console.WriteLine(bus1.BusBrand);   
         }
 
         private static void ThirdTask()

@@ -1,30 +1,43 @@
 ﻿using System;
 
-namespace Laba5
+namespace Laba6
 {
     public abstract class Inventory
     {
-        
+        public Inventory()
+        {
+            Cost = 300;
+        }
+
         public string Name { get; set; }
+        public int Cost { get; set; }
+
         public virtual void TakeInventoryItem()
         {
             Console.WriteLine("Inventory Item");
         }
-        public abstract void SayHelloWorld();
 
+        public abstract void SayHelloWorld();
     }
-    
-    public class Bench : Inventory,IHelloWorld
+
+    public class Bench : Inventory, IHelloWorld
     {
-        public Bench() 
+        public Bench()
         {
             Name = "Bench";
         }
-        public Bench(string name)
+
+        public Bench(string name, int cost)
         {
             Name = name;
+            Cost = cost;
         }
-        
+
+        void IHelloWorld.SayHelloWorld()
+        {
+            Console.WriteLine("Hello World(Interface)");
+        }
+
         public override void TakeInventoryItem()
         {
             Console.WriteLine("Bench");
@@ -35,28 +48,25 @@ namespace Laba5
             Console.WriteLine("Hello World(abstract)");
         }
 
-        void IHelloWorld.SayHelloWorld()
-        {
-            Console.WriteLine("Hello World(Interface)"); 
-        }
-
         public override string ToString()
         {
-            return $"It's a {this.GetType()} name - {this.Name}";
+            return $"It's a {GetType()} name - {Name} cost - {Cost}";
         }
     }
 
     public class Bars : Inventory
     {
-        public Bars() 
+        public Bars()
         {
             Name = "Bars";
         }
-        public Bars(string name)
+
+        public Bars(string name, int cost)
         {
             Name = name;
+            Cost = cost;
         }
-        
+
         public override void TakeInventoryItem()
         {
             Console.WriteLine("Bench");
@@ -66,13 +76,12 @@ namespace Laba5
         {
             Console.WriteLine("Hello World from Bars");
         }
-        
+
         public override string ToString()
         {
-            return $"It's a {this.GetType()} name - {this.Name}";
+            return $"It's a {GetType()} name - {Name} cost - {Cost}";
         }
-
-    }       
+    }
 
     public class Mats : Inventory
     {
@@ -80,11 +89,13 @@ namespace Laba5
         {
             Name = "Mats";
         }
-        public Mats(string name)
+
+        public Mats(string name, int cost)
         {
             Name = name;
+            Cost = cost;
         }
-        
+
         public override void TakeInventoryItem()
         {
             Console.WriteLine("The item is mats");
@@ -94,41 +105,21 @@ namespace Laba5
         {
             Console.WriteLine("Hello World from mats ");
         }
-        public override string ToString()
-        {
-            return $"It's a {GetType()} name - {this.Name}";
-        }
-
-    }
-    public class Ball : Inventory
-    {
-        public Ball()
-        {
-            Name = "Ball";
-        }
-
-        public Ball(string name)
-        {
-            Name = name;
-        }
-
-
-        public BallType Type { get; protected init; } = BallType.Default;
-
-        public override void TakeInventoryItem()
-        {
-            Console.WriteLine("You have taken a Ball");
-        }
-
-        public override void SayHelloWorld()
-        {
-            Console.WriteLine("Hello world from ball");
-        }
 
         public override string ToString()
         {
-            return $"There is a {GetType()} name - {this.Name}, type - {this.Type}";
+            return $"It's a {GetType()} name - {Name} cost - {Cost}";
         }
+
+        private struct UnnecessaryStruct
+        {
+            private int unnecessaryInt;
+
+            public void SaySomethingUnnecessary()
+            {
+                Console.WriteLine("Bruh");
+            }
+        } //<-- добавил бессмысленную структу для класса
     }
 
     public class BasketballBall : Ball
@@ -139,18 +130,20 @@ namespace Laba5
             Type = BallType.Basketball;
         }
 
-        public BasketballBall(string name)
+        public BasketballBall(string name, int cost)
         {
             Name = name;
+            Cost = cost;
             Type = BallType.Basketball;
         }
+
         public override string ToString()
         {
-            return $"It's a {GetType()} name - {this.Name}, type - {this.Type}";
+            return $"It's a {GetType()} name - {Name}, type - {Type} cost - {Cost}";
         }
     }
 
-    public sealed class TennisBall : Ball,ITennis
+    public sealed class TennisBall : Ball, ITennis
     {
         public TennisBall()
         {
@@ -158,19 +151,21 @@ namespace Laba5
             Type = BallType.Tennisball;
         }
 
-        public TennisBall(string name)
+        public TennisBall(string name, int cost)
         {
             Name = name;
+            Cost = cost;
             Type = BallType.Tennisball;
         }
-        
+
         public void WriteItForTennis()
         {
             Console.WriteLine("It's for tennis");
         }
+
         public override string ToString()
         {
-            return $"There is a {GetType()} name - {this.Name}, type - {this.Type}";
+            return $"There is a {GetType()} name - {Name}, type - {Type}, cost - {Cost}";
         }
 
         public override bool Equals(object? obj)
@@ -183,7 +178,4 @@ namespace Laba5
             return new Random().Next(0, 100000000);
         }
     }
-    
-    
-    
 }

@@ -9,17 +9,18 @@ namespace Laba2
         private static void Main()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Types();
+            //Types();
             // Strings();
             // Arrays();
             // Tuples();
             
-            // int[] arrVar =new int[] {5, 3, 12, 42, -23};
-            // var strVar = "ABCD";
-            // Console.WriteLine(LocalFunction(arrVar,strVar));
+            /*int[] arrVar =new int[] {5, 3, 12, 42, -23}; 
+            var strVar = "ABCD";
+            Console.WriteLine(LocalFunction(arrVar,strVar));*/
             
-            // FunctionWithChecked();
-           // FunctionWithUnchecked();  
+             /*FunctionWithChecked();
+           FunctionWithUnchecked();*/  
+             
             Console.ReadKey();
         }
 
@@ -74,11 +75,11 @@ namespace Laba2
             //b
 
             //Explicit Casting
-            intVar = 'a';
+            intVar = (int)'a';
             charVar = (char) intVar;
             shortVar = (short) ushortVar;
-            longVar = intVar;
-            doubleVar = floatVar;
+            longVar = (long)intVar;
+            doubleVar = (double)floatVar;
 
             Console.WriteLine(
                 $"intVar - {intVar}\ncharVar - {charVar}\nshortVar - {shortVar}\nlongVar - {longVar}\ndoubleVar - {doubleVar}\n----------\n");
@@ -112,7 +113,6 @@ namespace Laba2
                 intNullableVar = 666;
 
             //f
-
             //Error with Var
 
             // var check = true;
@@ -143,8 +143,7 @@ namespace Laba2
 
             Console.WriteLine($"\nInsert:{stringFirstVar.Insert(2, stringSecondVar)}");
             Console.WriteLine($"Remove:{stringFourthVar.Remove(0, 9)}");
-
-            //TODO интерполяцию забыл,но я её постоянно использую по коду,так что норм
+            
 
             //c
 
@@ -248,8 +247,7 @@ namespace Laba2
             ulong ulongVar = tupleFirstVar.Item5;
 
             (intVar, stringFirstVar, charVar, stringSecondVar, ulongVar) = tupleFirstVar;
-
-            //TODO Продемонстрируйте использование переменной ( _ ). (доступно начиная с C#7.3) 
+            
 
             //d 
             Console.WriteLine($"{tupleFirstVar == tupleSecondVar}");
@@ -282,5 +280,7 @@ namespace Laba2
                 Console.WriteLine(intVar);
             }
         }
+        
+        
     }
 }
