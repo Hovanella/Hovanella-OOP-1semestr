@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace Laba6
 {
@@ -33,9 +34,14 @@ namespace Laba6
         /*2. Реализуйте еще один метод, который будет считывать данные из json файла и инициализировать коллекцию*/
         public void CreateGymFromJSONFile(Gym gym)
         {
-            var stream = new StreamReader(@"D:\Образование\3Semester\OOP\OOP1Semestr\Laba6\Laba6\Data.json");
-            //TODO добить json
-
+            JsonSerializerSettings settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All };
+            using var stream = new StreamReader(@"D:\Образование\3Semester\OOP\OOP1Semestr\Laba6\Laba6\Data.json");
+            string JsonData = stream.ReadToEnd();
+            List<Inventory> deserializedList = JsonConvert.DeserializeObject<List<Inventory>>(JsonData, settings);
+            foreach (var item in deserializedList)
+         {
+             gym.Add(item);
+         }   
         }
         
         
