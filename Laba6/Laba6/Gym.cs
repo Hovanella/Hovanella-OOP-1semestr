@@ -11,15 +11,18 @@ namespace Laba6
 
         public Gym()
         {
-            _budget = 1000;
-            CurrentCapacity = 10;
+            _budget =CurrentBudget= 1000;
+            CurrentCapacity = 0;
             _demandCapacity = 5;
+            InventoryList = new List<Inventory>();
         }
 
         public Gym(int budget)
         {
             _budget = CurrentBudget = budget;
+            CurrentCapacity = 0;
             _demandCapacity = 5;
+            InventoryList = new List<Inventory>();
         }
 
         public Gym(int budget, int demandCapacity, params Inventory[] items)
@@ -60,7 +63,7 @@ namespace Laba6
         {
             if (item.Cost > CurrentBudget)
                 throw new ArgumentException();
-
+            
             InventoryList.Add(item);
             CurrentBudget -= item.Cost;
             CurrentCapacity++;

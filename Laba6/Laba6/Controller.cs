@@ -40,9 +40,9 @@ namespace Laba6
             string JsonData = stream.ReadToEnd();
             List<Inventory> deserializedList = JsonConvert.DeserializeObject<List<Inventory>>(JsonData, settings);
             foreach (var item in deserializedList)
-         {
-             gym.Add(item);
-         }   
+            {
+                gym.Add(item);
+            }   
             
         }
         
