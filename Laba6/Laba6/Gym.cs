@@ -11,7 +11,7 @@ namespace Laba6
 
         public Gym()
         {
-            _budget =CurrentBudget= 1000;
+            _budget = CurrentBudget = 1000;
             CurrentCapacity = 0;
             _demandCapacity = 5;
             InventoryList = new List<Inventory>();
@@ -51,19 +51,20 @@ namespace Laba6
 
         public void PringInventoryList()
         {
-            
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"----------------------\nGym: current capatity - {CurrentCapacity}, budget - {_budget}, current budget - {CurrentBudget} , Is equiped - {IsEquiped}(demand capacity - {_demandCapacity})");
+            Console.WriteLine(
+                $"----------------------\nGym: current capatity - {CurrentCapacity}, budget - {_budget}, current budget - {CurrentBudget} , Is equiped - {IsEquiped}(demand capacity - {_demandCapacity})");
             Console.ForegroundColor = ConsoleColor.Blue;
             foreach (var item in InventoryList) Console.WriteLine(item.ToString());
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("----------------------");
         }
+
         public void Add(Inventory item)
         {
             if (item.Cost > CurrentBudget)
                 throw new ArgumentException();
-            
+
             InventoryList.Add(item);
             CurrentBudget -= item.Cost;
             CurrentCapacity++;
@@ -71,6 +72,7 @@ namespace Laba6
                 IsEquiped = true;
             SortInventoryList();
         }
+
         public void Delete(Inventory item)
         {
             int cost = item.Cost;
@@ -81,9 +83,10 @@ namespace Laba6
                 if (CurrentCapacity < _demandCapacity)
                     IsEquiped = false;
             }
+
             SortInventoryList();
         }
-        
+
         private void SortInventoryList()
         {
             InventoryList = InventoryList.OrderBy(x => x.Cost).ToList();

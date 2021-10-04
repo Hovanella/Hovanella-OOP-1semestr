@@ -8,7 +8,7 @@ namespace Laba6
         {
             Cost = 300;
         }
-        
+
         public string Name { get; set; }
         public int Cost { get; set; }
 
@@ -165,7 +165,7 @@ namespace Laba6
 
         public override string ToString()
         {
-            return $"There is a {GetType()} name - {Name}, type - {Type}, cost - {Cost}";
+            return $"It's a {GetType()} name - {Name}, type - {Type}, cost - {Cost}";
         }
 
         public override bool Equals(object? obj)
