@@ -31,7 +31,7 @@ namespace Laba3
         
         public override int GetHashCode()
         {
-            return (int)(this.CarMileage * this.YearOfOpetationStart * this.PI);
+            return (int)(this.CarMileage * this.YearOfOpetationStart * Bus.PI);
         }
         
     }

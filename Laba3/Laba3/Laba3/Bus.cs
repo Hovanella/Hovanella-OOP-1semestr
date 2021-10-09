@@ -15,7 +15,7 @@ namespace Laba3
     public partial class Bus
     {
         //Поля
-        private double PI = 3.14;
+        private const double PI = 3.14;
         public readonly int busID; 
         private string _busNumber;
        

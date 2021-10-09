@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Laba6
+namespace Laba7
 {
     public class Gym
     {
@@ -34,7 +34,7 @@ namespace Laba6
 
             int itemsCost = inventoryList.Sum(item => item.Cost);
             if (itemsCost > budget)
-                throw new ArgumentException();
+                throw new ArgumentException("Item's cost is more than the budget");
 
             CurrentBudget = _budget - itemsCost;
             InventoryList = inventoryList;

@@ -16,7 +16,6 @@ namespace Laba3
             // сделайте касс partial
             // переопределяете методыкласса Object: Equals, для сравнения объектов,GetHashCode; для  алгоритма  вычисления хэша  руководствуйтесь стандартными  рекомендациями,    ToString –вывода  строки –информации об объекте
             Console.ForegroundColor = ConsoleColor.Cyan;
-
             SecondTask();
             ThirdTask();
         }
@@ -64,11 +63,11 @@ namespace Laba3
 
         private static void FourthTask()
         {
-            //4)Создайте и выведите анонимный тип(по образцу вашего класса)
-
+            //4)Создайте и выведите анонимный тип
             var driver = new { Name = "Ivanov", Surname = "Ivan" };
             Console.WriteLine($"Name: {driver.Name}\n" +
                               $"Surname: {driver.Surname}\n");
         }
     }
 }
+

@@ -1,0 +1,19 @@
+{
+  "$type": "System.Collections.Generic.List`1[[Laba6.Inventory, Laba6]], System.Private.CoreLib",
+  "$values": [
+    {
+      "$type": "Laba6.Ball, Laba6",
+      "Type": 0,
+      "Name": "Object1",
+      "Cost": 100
+    },
+    {
+      "$type": "Laba6.Bars, Laba6",
+      "Name": "Bars",
+      "Cost": 300
+    },
+    {
+      "$type": "Laba6.Mats, Laba6"
+    }
+  ]
+}
