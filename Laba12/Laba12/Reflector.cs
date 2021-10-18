@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Laba3;
+using Laba6;
 
 namespace Laba12
 {
@@ -10,13 +12,14 @@ namespace Laba12
         private static StreamWriter fileForInfortmation=null;
         private static StreamReader fileForInvoke=null;
 
-        private static readonly string fileForInfortmationPath = "Reflection.txt";
-        private static readonly string fileForInvokePath = "Invoke.txt";
+        private static readonly string fileForInfortmationPath = @"D:\Образование\3Semester\OOP\OOP1Semestr\Laba12\Laba12\Reflection.txt";
+        private static readonly string fileForInvokePath = @"D:\Образование\3Semester\OOP\OOP1Semestr\Laba12\Laba12\Invoke.txt";
 
 
+        //TODO проверить методы и добавить флаги,также вроде не работает метод WriteMethodsWithUserParametr
         public static void WriteAssemblyName(string currentClassName)
         {
-            string assemblyName = GetAssemblyName(Type.GetType(currentClassName, true, false));
+            string assemblyName = GetAssemblyName(Type.GetType(currentClassName, true, true));
             OpenFile();
             fileForInfortmation.WriteLine($"Current Class is {currentClassName}. Current Class Assembly Name is {assemblyName}");
             CloseFile();
@@ -70,7 +73,6 @@ namespace Laba12
             foreach (string item in methodsWithUserParametr) fileForInfortmation.WriteLine(item);
             CloseFile();
         }
-        
         
         
         // 2. Добавьте в Reflector обобщенный метод Create, который создает объект

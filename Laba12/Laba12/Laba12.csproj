@@ -5,4 +5,16 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Reference Include="Laba3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\Laba3\Laba3\Laba3\bin\Debug\net5.0\Laba3.dll</HintPath>
+      </Reference>
+      <Reference Include="Laba6, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\Laba6\Laba6\bin\Debug\net5.0\Laba6.dll</HintPath>
+      </Reference>
+      <Reference Include="Laba8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\Laba8\Laba8\bin\Debug\net5.0\Laba8.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>

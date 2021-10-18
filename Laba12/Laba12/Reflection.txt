@@ -1,0 +1,466 @@
+Current Class is Laba12.Reflector. Current Class Assembly Name is Laba12, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+-------------------------------------------------
+Contains public Constructions : False
+-------------------------------------------------
+Public Methods List
+Void WriteAssemblyName(System.String)
+Void WriteIsAnyPublicConstruction(System.String)
+Void WritePublicMethods(System.String)
+Void WriteFieldsAndProperties(System.String)
+Void WriteInterfaces(System.String)
+Void WriteMethodsWithUserParametr(System.String, System.String)
+System.Object Create(System.String)
+Void Invoke(System.String, System.String)
+System.Type GetType()
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+-------------------------------------------------
+Methods with user user parametr(CurrentClassName):
+-------------------------------------------------
+Current Class is Laba3.Bus, Laba3. Current Class Assembly Name is Laba3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+-------------------------------------------------
+Contains public Constructions : True
+-------------------------------------------------
+Public Methods List
+Int32 get_BusCounter()
+System.String get_BusNumber()
+Void set_BusNumber(System.String)
+System.String get_RouteNumber()
+Void set_RouteNumber(System.String)
+System.String get_DriverFIO()
+System.String get_BusBrand()
+Void set_BusBrand(System.String)
+Void set_YearOfOpetationStart(Int32)
+Int32 get_CarMileage()
+Void set_CarMileage(Int32)
+Void ShowClassInfo()
+Int32 GetYearOfOperationStart()
+Void IncreaseCarMileage(Int32 ByRef)
+Void ChangeBrand(System.String ByRef, System.String)
+Laba3.Bus CreateBus(Int32)
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+System.Type GetType()
+-------------------------------------------------
+Methods with user user parametr(GetYearOfOperationStart):
+-------------------------------------------------
+Current Class is Laba6.Gym, Laba6. Current Class Assembly Name is Laba6, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+-------------------------------------------------
+Contains public Constructions : True
+-------------------------------------------------
+Public Methods List
+System.Collections.Generic.List`1[Laba6.Inventory] get_InventoryList()
+Void set_InventoryList(System.Collections.Generic.List`1[Laba6.Inventory])
+Boolean get_IsEquiped()
+Int32 get_CurrentCapacity()
+Int32 get_CurrentBudget()
+Void PringInventoryList()
+Void Add(Laba6.Inventory)
+Void Delete(Laba6.Inventory)
+System.Type GetType()
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+-------------------------------------------------
+Public Methods List
+System.Collections.Generic.List`1[Laba6.Inventory] get_InventoryList()
+Void set_InventoryList(System.Collections.Generic.List`1[Laba6.Inventory])
+Boolean get_IsEquiped()
+Int32 get_CurrentCapacity()
+Int32 get_CurrentBudget()
+Void PringInventoryList()
+Void Add(Laba6.Inventory)
+Void Delete(Laba6.Inventory)
+System.Type GetType()
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+-------------------------------------------------
+Methods with user user parametr(PrintInventoryList):
+-------------------------------------------------
+Current Class is Laba12.Reflector. Current Class Assembly Name is Laba12, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+-------------------------------------------------
+Contains public Constructions : False
+-------------------------------------------------
+Public Methods List
+Void WriteAssemblyName(System.String)
+Void WriteIsAnyPublicConstruction(System.String)
+Void WritePublicMethods(System.String)
+Void WriteFieldsAndProperties(System.String)
+Void WriteInterfaces(System.String)
+Void WriteMethodsWithUserParametr(System.String, System.String)
+System.Object Create(System.String)
+Void Invoke(System.String, System.String)
+System.Type GetType()
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+-------------------------------------------------
+Methods with user user parametr(CurrentClassName):
+-------------------------------------------------
+Current Class is Laba3.Bus, Laba3. Current Class Assembly Name is Laba3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+-------------------------------------------------
+Contains public Constructions : True
+-------------------------------------------------
+Public Methods List
+Int32 get_BusCounter()
+System.String get_BusNumber()
+Void set_BusNumber(System.String)
+System.String get_RouteNumber()
+Void set_RouteNumber(System.String)
+System.String get_DriverFIO()
+System.String get_BusBrand()
+Void set_BusBrand(System.String)
+Void set_YearOfOpetationStart(Int32)
+Int32 get_CarMileage()
+Void set_CarMileage(Int32)
+Void ShowClassInfo()
+Int32 GetYearOfOperationStart()
+Void IncreaseCarMileage(Int32 ByRef)
+Void ChangeBrand(System.String ByRef, System.String)
+Laba3.Bus CreateBus(Int32)
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+System.Type GetType()
+-------------------------------------------------
+Methods with user user parametr(GetYearOfOperationStart):
+-------------------------------------------------
+Current Class is Laba6.Gym, Laba6. Current Class Assembly Name is Laba6, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+-------------------------------------------------
+Contains public Constructions : True
+-------------------------------------------------
+Public Methods List
+System.Collections.Generic.List`1[Laba6.Inventory] get_InventoryList()
+Void set_InventoryList(System.Collections.Generic.List`1[Laba6.Inventory])
+Boolean get_IsEquiped()
+Int32 get_CurrentCapacity()
+Int32 get_CurrentBudget()
+Void PringInventoryList()
+Void Add(Laba6.Inventory)
+Void Delete(Laba6.Inventory)
+System.Type GetType()
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+-------------------------------------------------
+Public Methods List
+System.Collections.Generic.List`1[Laba6.Inventory] get_InventoryList()
+Void set_InventoryList(System.Collections.Generic.List`1[Laba6.Inventory])
+Boolean get_IsEquiped()
+Int32 get_CurrentCapacity()
+Int32 get_CurrentBudget()
+Void PringInventoryList()
+Void Add(Laba6.Inventory)
+Void Delete(Laba6.Inventory)
+System.Type GetType()
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+-------------------------------------------------
+Methods with user user parametr(PrintInventoryList):
+-------------------------------------------------
+Current Class is Laba12.Reflector. Current Class Assembly Name is Laba12, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+-------------------------------------------------
+Contains public Constructions : False
+-------------------------------------------------
+Public Methods List
+Void WriteAssemblyName(System.String)
+Void WriteIsAnyPublicConstruction(System.String)
+Void WritePublicMethods(System.String)
+Void WriteFieldsAndProperties(System.String)
+Void WriteInterfaces(System.String)
+Void WriteMethodsWithUserParametr(System.String, System.String)
+System.Object Create(System.String)
+Void Invoke(System.String, System.String)
+System.Type GetType()
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+-------------------------------------------------
+Methods with user user parametr(CurrentClassName):
+-------------------------------------------------
+Current Class is Laba3.Bus, Laba3. Current Class Assembly Name is Laba3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+-------------------------------------------------
+Contains public Constructions : True
+-------------------------------------------------
+Public Methods List
+Int32 get_BusCounter()
+System.String get_BusNumber()
+Void set_BusNumber(System.String)
+System.String get_RouteNumber()
+Void set_RouteNumber(System.String)
+System.String get_DriverFIO()
+System.String get_BusBrand()
+Void set_BusBrand(System.String)
+Void set_YearOfOpetationStart(Int32)
+Int32 get_CarMileage()
+Void set_CarMileage(Int32)
+Void ShowClassInfo()
+Int32 GetYearOfOperationStart()
+Void IncreaseCarMileage(Int32 ByRef)
+Void ChangeBrand(System.String ByRef, System.String)
+Laba3.Bus CreateBus(Int32)
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+System.Type GetType()
+-------------------------------------------------
+Methods with user user parametr(GetYearOfOperationStart):
+-------------------------------------------------
+Current Class is Laba6.Gym, Laba6. Current Class Assembly Name is Laba6, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+-------------------------------------------------
+Contains public Constructions : True
+-------------------------------------------------
+Public Methods List
+System.Collections.Generic.List`1[Laba6.Inventory] get_InventoryList()
+Void set_InventoryList(System.Collections.Generic.List`1[Laba6.Inventory])
+Boolean get_IsEquiped()
+Int32 get_CurrentCapacity()
+Int32 get_CurrentBudget()
+Void PringInventoryList()
+Void Add(Laba6.Inventory)
+Void Delete(Laba6.Inventory)
+System.Type GetType()
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+-------------------------------------------------
+Public Methods List
+System.Collections.Generic.List`1[Laba6.Inventory] get_InventoryList()
+Void set_InventoryList(System.Collections.Generic.List`1[Laba6.Inventory])
+Boolean get_IsEquiped()
+Int32 get_CurrentCapacity()
+Int32 get_CurrentBudget()
+Void PringInventoryList()
+Void Add(Laba6.Inventory)
+Void Delete(Laba6.Inventory)
+System.Type GetType()
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+-------------------------------------------------
+Methods with user user parametr(PrintInventoryList):
+-------------------------------------------------
+Current Class is System.Object. Current Class Assembly Name is System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+-------------------------------------------------
+Contains public Constructions : True
+-------------------------------------------------
+Public Methods List
+Int32 get_BusCounter()
+System.String get_BusNumber()
+Void set_BusNumber(System.String)
+System.String get_RouteNumber()
+Void set_RouteNumber(System.String)
+System.String get_DriverFIO()
+System.String get_BusBrand()
+Void set_BusBrand(System.String)
+Void set_YearOfOpetationStart(Int32)
+Int32 get_CarMileage()
+Void set_CarMileage(Int32)
+Void ShowClassInfo()
+Int32 GetYearOfOperationStart()
+Void IncreaseCarMileage(Int32 ByRef)
+Void ChangeBrand(System.String ByRef, System.String)
+Laba3.Bus CreateBus(Int32)
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+System.Type GetType()
+-------------------------------------------------
+Methods with user user parametr(GetYearOfOperationStart):
+-------------------------------------------------
+Current Class is Laba12.Reflector. Current Class Assembly Name is Laba12, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+-------------------------------------------------
+Contains public Constructions : False
+-------------------------------------------------
+Public Methods List
+Void WriteAssemblyName(System.String)
+Void WriteIsAnyPublicConstruction(System.String)
+Void WritePublicMethods(System.String)
+Void WriteFieldsAndProperties(System.String)
+Void WriteInterfaces(System.String)
+Void WriteMethodsWithUserParametr(System.String, System.String)
+System.Object Create(System.String)
+Void Invoke(System.String, System.String)
+System.Type GetType()
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+-------------------------------------------------
+Methods with user user parametr(CurrentClassName):
+-------------------------------------------------
+Current Class is Laba3.Bus, Laba3. Current Class Assembly Name is Laba3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+-------------------------------------------------
+Contains public Constructions : True
+-------------------------------------------------
+Public Methods List
+Int32 get_BusCounter()
+System.String get_BusNumber()
+Void set_BusNumber(System.String)
+System.String get_RouteNumber()
+Void set_RouteNumber(System.String)
+System.String get_DriverFIO()
+System.String get_BusBrand()
+Void set_BusBrand(System.String)
+Void set_YearOfOpetationStart(Int32)
+Int32 get_CarMileage()
+Void set_CarMileage(Int32)
+Void ShowClassInfo()
+Int32 GetYearOfOperationStart()
+Void IncreaseCarMileage(Int32 ByRef)
+Void ChangeBrand(System.String ByRef, System.String)
+Laba3.Bus CreateBus(Int32)
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+System.Type GetType()
+-------------------------------------------------
+Methods with user user parametr(GetYearOfOperationStart):
+-------------------------------------------------
+Current Class is Laba6.Gym, Laba6. Current Class Assembly Name is Laba6, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+-------------------------------------------------
+Contains public Constructions : True
+-------------------------------------------------
+Public Methods List
+System.Collections.Generic.List`1[Laba6.Inventory] get_InventoryList()
+Void set_InventoryList(System.Collections.Generic.List`1[Laba6.Inventory])
+Boolean get_IsEquiped()
+Int32 get_CurrentCapacity()
+Int32 get_CurrentBudget()
+Void PringInventoryList()
+Void Add(Laba6.Inventory)
+Void Delete(Laba6.Inventory)
+System.Type GetType()
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+-------------------------------------------------
+Public Methods List
+System.Collections.Generic.List`1[Laba6.Inventory] get_InventoryList()
+Void set_InventoryList(System.Collections.Generic.List`1[Laba6.Inventory])
+Boolean get_IsEquiped()
+Int32 get_CurrentCapacity()
+Int32 get_CurrentBudget()
+Void PringInventoryList()
+Void Add(Laba6.Inventory)
+Void Delete(Laba6.Inventory)
+System.Type GetType()
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+-------------------------------------------------
+Methods with user user parametr(PrintInventoryList):
+-------------------------------------------------
+Current Class is System.Object. Current Class Assembly Name is System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+-------------------------------------------------
+Contains public Constructions : True
+-------------------------------------------------
+Public Methods List
+System.Type GetType()
+System.String ToString()
+Boolean Equals(System.Object)
+Boolean Equals(System.Object, System.Object)
+Boolean ReferenceEquals(System.Object, System.Object)
+Int32 GetHashCode()
+-------------------------------------------------
+Methods with user user parametr(Tostring):
+-------------------------------------------------
+Current Class is Laba12.Reflector. Current Class Assembly Name is Laba12, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+-------------------------------------------------
+Contains public Constructions : False
+-------------------------------------------------
+Public Methods List
+Void WriteAssemblyName(System.String)
+Void WriteIsAnyPublicConstruction(System.String)
+Void WritePublicMethods(System.String)
+Void WriteFieldsAndProperties(System.String)
+Void WriteInterfaces(System.String)
+Void WriteMethodsWithUserParametr(System.String, System.String)
+System.Object Create(System.String)
+Void Invoke(System.String, System.String)
+System.Type GetType()
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+-------------------------------------------------
+Methods with user user parametr(CurrentClassName):
+-------------------------------------------------
+Current Class is Laba3.Bus, Laba3. Current Class Assembly Name is Laba3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+-------------------------------------------------
+Contains public Constructions : True
+-------------------------------------------------
+Public Methods List
+Int32 get_BusCounter()
+System.String get_BusNumber()
+Void set_BusNumber(System.String)
+System.String get_RouteNumber()
+Void set_RouteNumber(System.String)
+System.String get_DriverFIO()
+System.String get_BusBrand()
+Void set_BusBrand(System.String)
+Void set_YearOfOpetationStart(Int32)
+Int32 get_CarMileage()
+Void set_CarMileage(Int32)
+Void ShowClassInfo()
+Int32 GetYearOfOperationStart()
+Void IncreaseCarMileage(Int32 ByRef)
+Void ChangeBrand(System.String ByRef, System.String)
+Laba3.Bus CreateBus(Int32)
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+System.Type GetType()
+-------------------------------------------------
+Methods with user user parametr(GetYearOfOperationStart):
+-------------------------------------------------
+Current Class is Laba6.Gym, Laba6. Current Class Assembly Name is Laba6, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+-------------------------------------------------
+Contains public Constructions : True
+-------------------------------------------------
+Public Methods List
+System.Collections.Generic.List`1[Laba6.Inventory] get_InventoryList()
+Void set_InventoryList(System.Collections.Generic.List`1[Laba6.Inventory])
+Boolean get_IsEquiped()
+Int32 get_CurrentCapacity()
+Int32 get_CurrentBudget()
+Void PringInventoryList()
+Void Add(Laba6.Inventory)
+Void Delete(Laba6.Inventory)
+System.Type GetType()
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+-------------------------------------------------
+Public Methods List
+System.Collections.Generic.List`1[Laba6.Inventory] get_InventoryList()
+Void set_InventoryList(System.Collections.Generic.List`1[Laba6.Inventory])
+Boolean get_IsEquiped()
+Int32 get_CurrentCapacity()
+Int32 get_CurrentBudget()
+Void PringInventoryList()
+Void Add(Laba6.Inventory)
+Void Delete(Laba6.Inventory)
+System.Type GetType()
+System.String ToString()
+Boolean Equals(System.Object)
+Int32 GetHashCode()
+-------------------------------------------------
+Methods with user user parametr(PrintInventoryList):
+-------------------------------------------------
+Current Class is System.Object. Current Class Assembly Name is System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+-------------------------------------------------
+Contains public Constructions : True
+-------------------------------------------------
+Public Methods List
+System.Type GetType()
+System.String ToString()
+Boolean Equals(System.Object)
+Boolean Equals(System.Object, System.Object)
+Boolean ReferenceEquals(System.Object, System.Object)
+Int32 GetHashCode()
+-------------------------------------------------
+Methods with user user parametr(Equals):
+-------------------------------------------------
