@@ -6,7 +6,7 @@ namespace Laba5
     {
         public void IAmPrinting(Inventory item)
         {
-            Console.WriteLine(  item.ToString() );
+            Console.WriteLine( item.ToString() );
           
         }
     }

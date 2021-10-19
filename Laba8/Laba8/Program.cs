@@ -17,7 +17,6 @@ namespace Laba8
         {
             /*.TODO Добавьте   методы сохранения объектов обобщённого типа  CollectionType<T>в файли чтения из него( на выбор: текстовый | xml | json).*/
             
-            
             var stringList = new List<string>();
             
             Console.ForegroundColor = ConsoleColor.Magenta;

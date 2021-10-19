@@ -8,9 +8,9 @@ namespace Laba5
         {
             Console.ForegroundColor = ConsoleColor.Red;
             
-          // First();
-          // Fourth();
-          // Fifth();
+           First();
+          Fourth();
+           Fifth();
           Seventh();
           
 

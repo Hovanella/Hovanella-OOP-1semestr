@@ -3,8 +3,8 @@
 namespace Laba4
 {
     public class List
-    { 
-        //класс элемента списка 
+    {
+        
         public class ListNode
         {
             public string Data { get; set; } 
@@ -49,7 +49,7 @@ namespace Laba4
             Head = Tail = new ListNode(); 
             Head.Data = data;
             Tail.Data = data;
-            _count = 1;
+            _count = 1; 
 
             ListDate = new Date();
         }

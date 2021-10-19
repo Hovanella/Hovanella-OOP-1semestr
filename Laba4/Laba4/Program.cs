@@ -7,9 +7,9 @@ namespace Laba4
         static void Main(string[] args)
         {
          
-            // First();
-            // Second();
-            // Third();
+            First();
+             Second();
+            Third();
             Fourth();
             Fifth();
         }
