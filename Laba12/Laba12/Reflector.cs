@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using Laba3;
 using Laba6;
 
@@ -46,7 +47,6 @@ namespace Laba12
         public static void WriteFieldsAndProperties(string currentClassName)
         {
             IEnumerable<string> FieldsAndProperties = new List<string>(GetFieldsAndProperties(Type.GetType(currentClassName, true, false)));
-
             OpenFile();
             fileForInfortmation.WriteLine("Fields And Properties List");
             foreach (string item in FieldsAndProperties) fileForInfortmation.WriteLine(item);
@@ -67,7 +67,6 @@ namespace Laba12
         {
             IEnumerable<string> methodsWithUserParametr =
                 new List<string>(GetMethodsWithUserParametr(Type.GetType(currentClassName, true, false), parametr));
-
             OpenFile();
             fileForInfortmation.WriteLine($"Methods with user user parametr({parametr}):");
             foreach (string item in methodsWithUserParametr) fileForInfortmation.WriteLine(item);
@@ -119,9 +118,9 @@ namespace Laba12
         }
 
         //b. есть ли публичные конструкторы;
-        private static bool IsAnyPublicConstruction(Type CurrentClass)
+        private static bool IsAnyPublicConstruction(Type CurrentClass)  
         {
-            foreach (var item in CurrentClass.GetConstructors())
+            foreach (var item in CurrentClass.GetConstructors(BindingFlags.Public))
                 if (item.IsPublic)
                     return true;
             return false;
@@ -133,7 +132,7 @@ namespace Laba12
         {
             //TODO вроде правильный вывод,но из-за типа Type есть дополнительные методы,неясно можно ли сделать правильнее
             var publicMethods = new List<string>();
-            foreach (var item in CurrentClass.GetMethods())
+            foreach (var item in CurrentClass.GetMethods(BindingFlags.Public| BindingFlags.Instance))
                 if (item.IsPublic)
                     publicMethods.Add(item.ToString());
             return publicMethods;
@@ -142,7 +141,7 @@ namespace Laba12
         //d. получает информацию о полях и свойствах класса (возвращает IEnumerable<string>);
         private static IEnumerable<string> GetFieldsAndProperties(Type CurrentClass)
         {
-            return new List<string> {CurrentClass.GetFields().ToString(), CurrentClass.GetEvents().ToString()};
+            return new List<string> {CurrentClass.GetFields(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic).ToString(), CurrentClass.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic).ToString()};
         }
 
         //e. получает все реализованные классом интерфейсы (возвращает IEnumerable<string>);
@@ -160,9 +159,24 @@ namespace Laba12
         private static IEnumerable<string> GetMethodsWithUserParametr(Type CurrentClass, string userParametr)
         {
             var methodsWithUserParametr = new List<string>();
-            foreach (var item in CurrentClass.GetMethods())
-                if (item.GetParameters().Any(param => param.Name == userParametr))
+            var currentClassMethods = CurrentClass.GetMethods();
+           
+            
+            foreach (var item in currentClassMethods)
+            {
+                var itemParameters = item.GetParameters();
+                
+                if (itemParameters.Length == 0)
+                {
+                    if(userParametr=="")
+                        methodsWithUserParametr.Add(item.ToString());
+                    continue;
+                }
+                
+                if (itemParameters.Any(param => param.Name == userParametr))
                     methodsWithUserParametr.Add(item.ToString());
+            }
+                
             return methodsWithUserParametr;
         }
     }

@@ -9,31 +9,43 @@ namespace Laba12
     {
         private static void Main(string[] args)
         {
+            ClearFile();
             First();
             Second();
-           
+            Third();
+        }
+
+        private static void Third()
+        {
+            /*2. Добавьте в Reflector обобщенный метод Create, который создает объект
+            переданного типа (на основе имеющихся публичных конструкторов) и возвращает
+            его пользователю.*/
+            var sum = Reflector.Create("Laba12.Sum");
+            Console.WriteLine(sum is Sum);
         }
 
         private static void Second()
         {
             
-            
+            /*Продемонстрируйте работу «Рефлектора» для исследования типов на созданных
+                вами классах не менее двух (предыдущие лабораторные работы) и стандартных
+            классах .Net.*/
             
             Reflector.WriteAssemblyName("Laba3.Bus, Laba3");
             Reflector.WriteIsAnyPublicConstruction("Laba3.Bus, Laba3");
             Reflector.WritePublicMethods("Laba3.Bus, Laba3"); 
-            Reflector.WriteMethodsWithUserParametr("Laba3.Bus, Laba3","GetYearOfOperationStart");
+            Reflector.WriteMethodsWithUserParametr("Laba3.Bus, Laba3","brand");
             
             Reflector.WriteAssemblyName("Laba6.Gym, Laba6");
             Reflector.WriteIsAnyPublicConstruction("Laba6.Gym, Laba6");
             Reflector.WritePublicMethods("Laba6.Gym, Laba6");
             Reflector.WritePublicMethods("Laba6.Gym, Laba6"); 
-            Reflector.WriteMethodsWithUserParametr("Laba6.Gym, Laba6","PrintInventoryList");
+            Reflector.WriteMethodsWithUserParametr("Laba6.Gym, Laba6","item");
             
             Reflector.WriteAssemblyName("System.Object");
             Reflector.WriteIsAnyPublicConstruction("System.Object");
             Reflector.WritePublicMethods("System.Object"); 
-            Reflector.WriteMethodsWithUserParametr("System.Object","Equals");
+            Reflector.WriteMethodsWithUserParametr("System.Object","");
             
             
         }
@@ -68,13 +80,19 @@ namespace Laba12
             Reflector.WriteAssemblyName("Laba12.Reflector");
             Reflector.WriteIsAnyPublicConstruction("Laba12.Reflector");
             Reflector.WritePublicMethods("Laba12.Reflector");
-            Reflector.WriteMethodsWithUserParametr("Laba12.Reflector","CurrentClassName");
+            Reflector.WriteMethodsWithUserParametr("Laba12.Reflector","currentClassName");
             Reflector.Invoke("Laba12.Sum","Summa");
             
             
+
+
+        }
+
+        static void ClearFile()
+        {
+            var fileForInfortmation = new StreamWriter(@"D:\Образование\3Semester\OOP\OOP1Semestr\Laba12\Laba12\Reflection.txt", false);
             
-            
-            
+            fileForInfortmation.Close();
         }
     }
 }
