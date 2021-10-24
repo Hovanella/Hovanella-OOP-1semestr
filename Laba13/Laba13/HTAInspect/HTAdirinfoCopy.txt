@@ -1,0 +1,16 @@
+|Directories| [
+#ProgramData#Blackmagic Design
+$RECYCLE.BIN
+Applications
+Config.Msi
+GULNI
+JetBrains Rider 2020.3.2
+Microsoft VS Code
+System Volume Information
+WebStorm 2021.1
+_acestream_cache_
+Образование
+]
+|Files| [
+Win 10 Tweaker.exe
+]
