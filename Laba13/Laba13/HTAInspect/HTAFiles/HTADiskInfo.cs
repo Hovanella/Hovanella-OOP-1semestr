@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 
 namespace Laba13
@@ -10,13 +9,12 @@ namespace Laba13
     public static class HTADiskInfo
     {
         public static event Action<string> OnUpdate;
-        
+
         public static void ShowFreeSpace(string driveName)
         {
-           var currentDrive = DriveInfo.GetDrives().Single(x => x.Name == driveName);
-           Console.WriteLine($"Free space on the disk {currentDrive.Name} - {currentDrive.AvailableFreeSpace} bytes ");
-           OnUpdate($"Free space on the disk {currentDrive.Name} - {currentDrive.AvailableFreeSpace} bytes ");
-           
+            var currentDrive = DriveInfo.GetDrives().Single(x => x.Name == driveName);
+            Console.WriteLine($"Free space on the disk {currentDrive.Name} - {currentDrive.AvailableFreeSpace} bytes ");
+            OnUpdate($"Free space on the disk {currentDrive.Name} - {currentDrive.AvailableFreeSpace} bytes ");
         }
 
         public static void ShowFileSystemInfo(string driveName)
@@ -28,24 +26,24 @@ namespace Laba13
 
         public static void ShowAllDrivesInfo()
         {
-            StringBuilder message = new StringBuilder("All drives information : \n");
+            var message = new StringBuilder("All drives information : \n");
             Console.WriteLine("[");
             message.AppendFormat("[\n");
             foreach (var currentDrive in DriveInfo.GetDrives())
             {
-                if (currentDrive.IsReady==false)
+                if (currentDrive.IsReady == false)
                     continue;
-                
-                Console.WriteLine($"Name - {currentDrive.Name},Total size - {currentDrive.TotalSize},Free space - {currentDrive.AvailableFreeSpace} , Volume label - {currentDrive.VolumeLabel}");
-                
-                message.AppendFormat($"Name - {currentDrive.Name},Total size - {currentDrive.TotalSize},Free space - {currentDrive.AvailableFreeSpace} , Volume label - {currentDrive.VolumeLabel}]\n");
+
+                Console.WriteLine(
+                    $"Name - {currentDrive.Name},Total size - {currentDrive.TotalSize},Free space - {currentDrive.AvailableFreeSpace} , Volume label - {currentDrive.VolumeLabel}");
+
+                message.AppendFormat(
+                    $"Name - {currentDrive.Name},Total size - {currentDrive.TotalSize},Free space - {currentDrive.AvailableFreeSpace} , Volume label - {currentDrive.VolumeLabel}]\n");
             }
+
             Console.WriteLine("]");
             message.AppendFormat("]\n");
             OnUpdate(message.ToString());
         }
-        
-        
-        
     }
 }

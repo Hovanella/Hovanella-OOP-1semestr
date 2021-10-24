@@ -13,40 +13,41 @@ namespace Laba13
             HTAFileInfo.OnUpdate += HTALog.WriteInTXT;
             HTADirInfo.OnUpdate += HTALog.WriteInTXT;
             HTAFileManager.OnUpdate += HTALog.WriteInTXT;
-            
+
             HTADiskInfo.ShowFreeSpace(@"D:\");
             HTADiskInfo.ShowFileSystemInfo(@"C:\");
             HTADiskInfo.ShowAllDrivesInfo();
-            
+
             HTAFileInfo.ShowFullPath(@"d:\Образование\3Semester\OOP\OOP1Semestr\Laba13\Laba13\Log.txt");
             HTAFileInfo.ShowFileInfo(@"d:\Образование\3Semester\OOP\OOP1Semestr\Laba13\Laba13\Log.txt");
             HTAFileInfo.ShowFileDates(@"d:\Образование\3Semester\OOP\OOP1Semestr\Laba13\Laba13\Log.txt");
-            
+
             HTADirInfo.ShowCreationTime(@"d:\Образование\3Semester");
             HTADirInfo.ShowNumberOfFiles(@"d:\Образование\3Semester");
             HTADirInfo.ShowNumberOfSubdirectories(@"d:\Образование\3Semester");
             HTADirInfo.ShowParentDirectory(@"d:\Образование\3Semester");
 
             HTAFileManager.InspectDrive(@"D:\");
-            HTAFileManager.CopyFiles(@"d:\Образование\3Semester\OOP\OOP1Semestr\Laba13\Laba13\",".cs");
-            HTAFileManager.Archive(@"d:\Образование\3Semester\OOP\OOP1Semestr\Laba13\Laba13\Archivetest",@"d:\Образование\3Semester\OOP\OOP1Semestr\Laba13\Laba13\Unarchivetest");
-//TODO 6 и 7 task 
-FindInfo();
+            HTAFileManager.CopyFiles(@"d:\Образование\3Semester\OOP\OOP1Semestr\Laba13\Laba13\", ".cs");
+            HTAFileManager.Archive(@"d:\Образование\3Semester\OOP\OOP1Semestr\Laba13\Laba13\Archivetest",
+                @"d:\Образование\3Semester\OOP\OOP1Semestr\Laba13\Laba13\Unarchivetest");
+            FindInfo();
         }
 
         public static void FindInfo()
         {
-            StringBuilder output = new StringBuilder();
-            
+            //Немного шиткода и танцев с бубном ради странного функционала,но его люди обычно вообще не делают,так что я хоть попытался и оно працуе 
+            var output = new StringBuilder();
+
             using (var stream = new StreamReader(@"d:\Образование\3Semester\OOP\OOP1Semestr\Laba13\Laba13\Log.txt"))
             {
                 var textline = "";
-                bool isActual = false;
+                var isActual = false;
                 while (stream.EndOfStream == false)
                 {
                     isActual = false;
                     textline = stream.ReadLine();
-                    if (textline!="" && DateTime.Parse(textline).Day == DateTime.Now.Day)
+                    if (textline != "" && DateTime.Parse(textline).Day == DateTime.Now.Day)
                     {
                         isActual = true;
                         textline += "\n";
@@ -61,14 +62,11 @@ FindInfo();
                             textline += "\n";
                             output.AppendFormat(textline);
                         }
-                        
+
                         textline = stream.ReadLine();
                     }
 
-                    if (isActual)
-                    {
-                        output.AppendFormat("------------------------------\n");
-                    }
+                    if (isActual) output.AppendFormat("------------------------------\n");
                 }
             }
 

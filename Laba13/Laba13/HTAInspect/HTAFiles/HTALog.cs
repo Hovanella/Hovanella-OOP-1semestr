@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Runtime.InteropServices;
 
 namespace Laba13
 {
@@ -9,9 +8,9 @@ namespace Laba13
     {
         public static void WriteInTXT(string message)
         {
-            using (var stream = new StreamWriter(@"d:\Образование\3Semester\OOP\OOP1Semestr\Laba13\Laba13\Log.txt",true))
+            using (var stream = new StreamWriter(@"d:\Образование\3Semester\OOP\OOP1Semestr\Laba13\Laba13\Log.txt", true))
             {
-               stream.WriteLine($"{DateTime.Now.ToString()}\n{message}\n------------------------------");
+                stream.WriteLine($"{DateTime.Now.ToString()}\n{message}\n------------------------------");
             }
         }
     }

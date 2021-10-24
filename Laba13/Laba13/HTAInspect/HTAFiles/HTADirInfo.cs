@@ -11,7 +11,6 @@ namespace Laba13
         {
             Console.WriteLine($"The number of files - {Directory.GetFiles(path).Length}");
             OnUpdate($"The number of files - {Directory.GetFiles(path).Length}");
-            
         }
 
         public static void ShowCreationTime(string path)
@@ -31,6 +30,5 @@ namespace Laba13
             Console.WriteLine($"Parent Directory - {Directory.GetParent(path)}");
             OnUpdate($"Parent Directory - {Directory.GetParent(path)}");
         }
-        
     }
 }
