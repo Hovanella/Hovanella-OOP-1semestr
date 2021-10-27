@@ -155,7 +155,7 @@ namespace Laba8
             _count = 0;
         }
         
-        /*public void WriteToFile <T>()
+        public void WriteToFile <T>()
         {
             using (StreamWriter sw = new StreamWriter(@"D:\Образование\3Semester\OOP\OOP1Semestr\Laba8\Laba8\Data.txt"))
             {
@@ -169,18 +169,26 @@ namespace Laba8
             }
         }
 
-        public void ReadFromFile<T>() where T
+        public T[] ReadFromFile<T>()
         {
             using (StreamReader sw = new StreamReader(@"D:\Образование\3Semester\OOP\OOP1Semestr\Laba8\Laba8\Data.txt"))
             {
                 string[] items = sw.ReadToEnd().Split(" --> ");
-                foreach (T item in items)
+                
+                T[] outputItems = new T[items.Length];
+
+
+                int counter = 0;
+                foreach (string item in items)
                 {
-                    this.Add(item);
+                    outputItems[counter] = (T)Convert.ChangeType(item, typeof(T));
+                    counter++;
                 }
+
+                return outputItems;
             }
             //TODO как-то обобщить это
-        }*/
+        }
     
         
         //Перегрузки операторов

@@ -540,4 +540,51 @@ File manager has copied .cs files from d:\Образование\3Semester\OOP\O
 24.10.2021 23:19:26
 File manager has archived files from d:\Образование\3Semester\OOP\OOP1Semestr\Laba13\Laba13\Archivetest and unarchived
 ------------------------------
+24.10.2021 23:37:27
+File system type and drive format of  C:\ : Fixed, NTFS
+------------------------------
+24.10.2021 23:37:27
+All drives information : 
+[
+Name - C:\,Total size - 126098599936,Free space - 24052604928 , Volume label - ]
+Name - D:\,Total size - 129179316224,Free space - 37523558400 , Volume label - ]
+Name - E:\,Total size - 1000067825664,Free space - 143594094592 , Volume label - ]
+]
+
+------------------------------
+24.10.2021 23:37:27
+Full path to the Log.txt - d:\Образование\3Semester\OOP\OOP1Semestr\Laba13\Laba13\Log.txt
+------------------------------
+24.10.2021 23:37:27
+[
+File name: Log.txt
+Size: 19415 bytes
+File extension: .txt
+]
+
+------------------------------
+24.10.2021 23:37:27
+File Log.txt : date of creation - 23.10.2021 21:03:50, date of last edit - 24.10.2021 23:37:27
+------------------------------
+24.10.2021 23:37:27
+Time of the directory creation - 22.07.2021 20:20:37
+------------------------------
+24.10.2021 23:37:27
+The number of files - 0
+------------------------------
+24.10.2021 23:37:27
+Number of subdirectories - 10
+------------------------------
+24.10.2021 23:37:27
+Parent Directory - d:\Образование
+------------------------------
+24.10.2021 23:37:27
+File manager has inspected D:\
+------------------------------
+24.10.2021 23:37:27
+File manager has copied .cs files from d:\Образование\3Semester\OOP\OOP1Semestr\Laba13\Laba13\
+------------------------------
+24.10.2021 23:37:27
+File manager has archived files from d:\Образование\3Semester\OOP\OOP1Semestr\Laba13\Laba13\Archivetest and unarchived
+------------------------------
 

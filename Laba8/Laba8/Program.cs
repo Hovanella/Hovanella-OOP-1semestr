@@ -7,9 +7,9 @@ namespace Laba8
     {
         static void Main(string[] args)
         {
-            Second();
+            /*Second();
             Third();
-            Fourth();
+            Fourth();*/
             Fifth();
         }
 
@@ -17,15 +17,21 @@ namespace Laba8
         {
             /*.TODO Добавьте   методы сохранения объектов обобщённого типа  CollectionType<T>в файли чтения из него( на выбор: текстовый | xml | json).*/
             
-            var stringList = new List<string>();
+            var stringList = new List<double>();
             
             Console.ForegroundColor = ConsoleColor.Magenta;
-            stringList.Add("A");
-            stringList.Add("B");
-            stringList.Add("C");
+            stringList.Add(1.2);
+            stringList.Add(2.3);
+            stringList.Add(4.4);
             stringList.Show();
-            /*stringList.WriteToFile();
-            stringList.ReadFromFile();*/
+            var itemsFromfile = new double[]{};
+            stringList.WriteToFile<string>();
+            itemsFromfile= stringList.ReadFromFile<double>();
+            foreach (double s in itemsFromfile)
+            {
+              Console.WriteLine(s);   
+            }
+            
         }
 
         private static void Fourth()
