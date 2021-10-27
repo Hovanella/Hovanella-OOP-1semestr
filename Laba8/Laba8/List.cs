@@ -187,7 +187,7 @@ namespace Laba8
 
                 return outputItems;
             }
-            //TODO как-то обобщить это
+            
         }
     
         
