@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<Ball xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Fedya</Name>
+  <FieldToBeNotSeriazable>666</FieldToBeNotSeriazable>
+  <Type>Default</Type>
+</Ball>

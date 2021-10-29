@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Дети>
+  <child year="1998">
+    <name>Юля</name>
+  </child>
+  <child year="1995">
+    <name>Наташа</name>
+  </child>
+</Дети>

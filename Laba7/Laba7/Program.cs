@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using Laba7.Exceptions;
 
 namespace Laba7
@@ -11,7 +10,9 @@ namespace Laba7
             Console.ForegroundColor = ConsoleColor.Red;
             MainTask();
             Dop();
+            
         }
+
         private static void Dop()
         {
             /*1.  Создайте  класс Logger,  который  будет  заниматься  логгированием различных  событий  и  исключений.  Логгер  должен  уметь  логгировать ошибки/исключения, предупреждения и просто какую-то информацию.
@@ -34,8 +35,6 @@ namespace Laba7
              В конце поставить универсальный обработчик catch.Обработку  исключений  вынести  в main.  При  обработке  выводить специфическую  информацию  о  месте,  диагностикуи  причине  исключения. 
              Последним должен быть блок, который отлавливает все исключения(finally).
              Добавьте кодв одной из функций макрос Assert. Объяснитечто он проверяет, как будет выполняться программа в случае не выполнения условия. Объясните назначение Assert*/
-            
-            
             try
             {
                 new Bench("A", 20000000);
@@ -43,7 +42,6 @@ namespace Laba7
             catch (CostExeption e)
             {
                 Console.WriteLine($"{e.Message}, Cost - {e.Cost}");
-               
             }
 
             try
@@ -54,7 +52,7 @@ namespace Laba7
             {
                 Console.WriteLine($"{e.Message}");
             }
-            
+
             try
             {
                 new TennisBall("ball", 6668);
@@ -65,7 +63,7 @@ namespace Laba7
             }
 
             try
-            { 
+            {
                 new Ball().SayHelloWorld();
             }
             catch (InvalidOperationException e)
@@ -80,19 +78,17 @@ namespace Laba7
             catch (ArgumentException e)
             {
                 Console.WriteLine(e.Message);
-
             }
             finally
             {
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("Finally");
             }
-            
-           // Debug.Assert(false);
-            
-        }
-        
-        /*4.TODO  Добавьте в классы из л.р. 6 логгер так, чтобы его возможно было быстро заменить  во  время  выполнения  другим  и  вместо  простого  вывода  на  консоль сообщения об ошибке, используйте свой логгер.*/
 
+            // Debug.Assert(false);
+        }
+
+
+        /*4.TODO  Добавьте в классы из л.р. 6 логгер так, чтобы его возможно было быстро заменить  во  время  выполнения  другим  и  вместо  простого  вывода  на  консоль сообщения об ошибке, используйте свой логгер.*/
     }
 }

@@ -1,48 +1,34 @@
 ﻿using System;
-using Laba7.Exceptions;
+using System.Xml.Serialization;
 
-namespace Laba7
+namespace Laba14
 {
+    [Serializable]
     public abstract class Inventory
     {
-        public Inventory()
-        {
-            Cost = 300;
-        }
-
+        
         public string Name { get; set; }
-        public int Cost { get; set; }
-
+        
         public virtual void TakeInventoryItem()
         {
             Console.WriteLine("Inventory Item");
         }
-
         public abstract void SayHelloWorld();
-    }
 
-    public class Bench : Inventory, IHelloWorld
+    }
+    
+    [Serializable]
+    public class Bench : Inventory,IHelloWorld
     {
-        public Bench()
+        public Bench() 
         {
             Name = "Bench";
         }
-
-        public Bench(string name, int cost)
+        public Bench(string name)
         {
-            if (cost > 1000000)
-                throw new CostExeption("Cost is too big", "Bench", cost);
-            if (name == "Bars")
-                throw new InventoryException("Bench can't be named as Bars", "Bench");
             Name = name;
-            Cost = cost;
         }
-
-        void IHelloWorld.SayHelloWorld()
-        {
-            Console.WriteLine("Hello World(Interface)");
-        }
-
+        
         public override void TakeInventoryItem()
         {
             Console.WriteLine("Bench");
@@ -53,27 +39,28 @@ namespace Laba7
             Console.WriteLine("Hello World(abstract)");
         }
 
+        void IHelloWorld.SayHelloWorld()
+        {
+            Console.WriteLine("Hello World(Interface)"); 
+        }
+
         public override string ToString()
         {
-            return $"It's a {GetType()} name - {Name} cost - {Cost}";
+            return $"It's a {this.GetType()} name - {this.Name}";
         }
     }
 
     public class Bars : Inventory
     {
-        public Bars()
+        public Bars() 
         {
             Name = "Bars";
         }
-
-        public Bars(string name, int cost)
+        public Bars(string name)
         {
-            if (cost > 1000000)
-                throw new CostExeption("Cost is too big", "Bars", cost);
             Name = name;
-            Cost = cost;
         }
-
+        
         public override void TakeInventoryItem()
         {
             Console.WriteLine("Bench");
@@ -83,28 +70,25 @@ namespace Laba7
         {
             Console.WriteLine("Hello World from Bars");
         }
-
+        
         public override string ToString()
         {
-            return $"It's a {GetType()} name - {Name} cost - {Cost}";
+            return $"It's a {this.GetType()} name - {this.Name}";
         }
-    }
 
+    }       
+    [Serializable]
     public class Mats : Inventory
     {
         public Mats()
         {
             Name = "Mats";
         }
-
-        public Mats(string name, int cost)
+        public Mats(string name)
         {
-            if (cost > 1000000)
-                throw new CostExeption("Cost is too big", "Mats", cost);
             Name = name;
-            Cost = cost;
         }
-
+        
         public override void TakeInventoryItem()
         {
             Console.WriteLine("The item is mats");
@@ -114,21 +98,44 @@ namespace Laba7
         {
             Console.WriteLine("Hello World from mats ");
         }
+        public override string ToString()
+        {
+            return $"It's a {GetType()} name - {this.Name}";
+        }
+
+    }
+    [Serializable]
+    public class Ball : Inventory
+    {
+        public Ball()
+        {
+            Name = "Ball";
+        }
+        
+        public Ball(string name)
+        {
+            Name = name;
+        }
+
+       [NonSerialized]
+        public int FieldToBeNotSeriazable = 666;
+            
+        public BallType Type { get; set; } = BallType.Default;
+
+        public override void TakeInventoryItem()
+        {
+            Console.WriteLine("You have taken a Ball");
+        }
+
+        public override void SayHelloWorld()
+        {
+            Console.WriteLine("Hello world from ball");
+        }
 
         public override string ToString()
         {
-            return $"It's a {GetType()} name - {Name} cost - {Cost}";
+            return $"There is a {GetType()} name - {this.Name}, type - {this.Type}";
         }
-
-        private struct UnnecessaryStruct
-        {
-            private int unnecessaryInt;
-
-            public void SaySomethingUnnecessary()
-            {
-                Console.WriteLine("Bruh");
-            }
-        } //<-- добавил бессмысленную структу для класса
     }
 
     public class BasketballBall : Ball
@@ -139,18 +146,18 @@ namespace Laba7
             Type = BallType.Basketball;
         }
 
-        public BasketballBall(string name, int cost) : base(name, cost)
+        public BasketballBall(string name)
         {
+            Name = name;
             Type = BallType.Basketball;
         }
-
         public override string ToString()
         {
-            return $"It's a {GetType()} name - {Name}, type - {Type} cost - {Cost}";
+            return $"It's a {GetType()} name - {this.Name}, type - {this.Type}";
         }
     }
 
-    public sealed class TennisBall : Ball, ITennis
+    public sealed class TennisBall : Ball,ITennis
     {
         public TennisBall()
         {
@@ -158,19 +165,19 @@ namespace Laba7
             Type = BallType.Tennisball;
         }
 
-        public TennisBall(string name, int cost) : base(name, cost)
+        public TennisBall(string name)
         {
+            Name = name;
             Type = BallType.Tennisball;
         }
-
+        
         public void WriteItForTennis()
         {
             Console.WriteLine("It's for tennis");
         }
-
         public override string ToString()
         {
-            return $"It's a {GetType()} name - {Name}, type - {Type}, cost - {Cost}";
+            return $"There is a {GetType()} name - {this.Name}, type - {this.Type}";
         }
 
         public override bool Equals(object? obj)
@@ -183,4 +190,7 @@ namespace Laba7
             return new Random().Next(0, 100000000);
         }
     }
+    
+    
+    
 }

@@ -2,7 +2,6 @@
 
 namespace Laba7.Exceptions
 {
-    
     /*Создать иерархию классов исключений (собственных)–3 типа и более.Сделать  наследование  пользовательских  типов  исключений  от стандартных классов .Net(например,Exception,IndexOutofRange).*/
     public class InventoryException : Exception
     {

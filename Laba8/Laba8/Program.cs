@@ -7,16 +7,14 @@ namespace Laba8
     {
         static void Main(string[] args)
         {
-            /*Second();
+            Second();
             Third();
-            Fourth();*/
+            Fourth();
             Fifth();
         }
 
         private static void Fifth()
         {
-            /*.TODO Добавьте   методы сохранения объектов обобщённого типа  CollectionType<T>в файли чтения из него( на выбор: текстовый | xml | json).*/
-            
             var stringList = new List<double>();
             
             Console.ForegroundColor = ConsoleColor.Magenta;
@@ -39,9 +37,11 @@ namespace Laba8
             /*4.Определить пользовательский класс, который будет использоваться в качестве  параметра обобщения.  Для  пользовательского  типа  взять  класс  из лабораторной No5 «Наследование». */
             Console.ForegroundColor = ConsoleColor.Gray;
             var BenchList = new List<Bench>();
-            BenchList.Add(new Bench());
+            var myBench = new Bench("My",300);
+            BenchList.Add(myBench);
             BenchList.Add(new Bench("A",300));
             BenchList.Add(new Bench("B",1000));
+            BenchList.Delete(myBench);
             BenchList.Show();
         }
 
