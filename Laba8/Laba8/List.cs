@@ -7,7 +7,7 @@ namespace Laba8
     public class List<T>:IGeneric<T>
     { 
         //класс элемента списка 
-        public class ListNode<T>
+        public class ListNode<T>    
         {
             public T Data { get; set; } 
             public ListNode<T>Next { get; set; }
@@ -129,22 +129,22 @@ namespace Laba8
 
             if (_count == 1)
             {
-                Console.WriteLine($"(HEAD){Head.Data.ToString()}(TAIL)-->NULL");
+                Console.WriteLine($"(HEAD){Head.Data}(TAIL)-->NULL");
                 return;
             }
 
             ListNode<T> current = Head;
 
-            Console.Write($"{current.Data.ToString()}(HEAD)-->");
+            Console.Write($"{current.Data}(HEAD)-->");
 
             current = current.Next;
 
             while (current.Next!=null)
             {
-                Console.Write($"{current.Data.ToString()}-->");
+                Console.Write($"{current.Data}-->");
                 current = current.Next;
             }
-            Console.WriteLine($"{current.Data.ToString()}(TAIL)-->NULL");
+            Console.WriteLine($"{current.Data}(TAIL)-->NULL");
 
 
         }
@@ -176,7 +176,8 @@ namespace Laba8
                 string[] items = sw.ReadToEnd().Split(" --> ");
                 
                 T[] outputItems = new T[items.Length];
-                
+
+
                 int counter = 0;
                 foreach (string item in items)
                 {
@@ -186,6 +187,7 @@ namespace Laba8
 
                 return outputItems;
             }
+            //TODO как-то обобщить это
         }
     
         
