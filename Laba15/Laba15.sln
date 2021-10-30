@@ -1,10 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laba15", "Laba15\Laba15.csproj", "{C440C143-0DED-48A6-804D-E7CBF5138D24}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laba15_Extra", "Laba15_Extra\Laba15_Extra.csproj", "{9CC51B50-7349-46ED-8E73-6313B0F086B8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laba15_Extra2", "Laba15_Extra2\Laba15_Extra2.csproj", "{9DE77A16-BC60-4E32-ACB6-C9620D9A742F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laba15", "Laba15\Laba15.csproj", "{72D02AAC-7F1D-4344-8174-3069B250817F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,17 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C440C143-0DED-48A6-804D-E7CBF5138D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C440C143-0DED-48A6-804D-E7CBF5138D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C440C143-0DED-48A6-804D-E7CBF5138D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C440C143-0DED-48A6-804D-E7CBF5138D24}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9CC51B50-7349-46ED-8E73-6313B0F086B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9CC51B50-7349-46ED-8E73-6313B0F086B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9CC51B50-7349-46ED-8E73-6313B0F086B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9CC51B50-7349-46ED-8E73-6313B0F086B8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9DE77A16-BC60-4E32-ACB6-C9620D9A742F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9DE77A16-BC60-4E32-ACB6-C9620D9A742F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9DE77A16-BC60-4E32-ACB6-C9620D9A742F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9DE77A16-BC60-4E32-ACB6-C9620D9A742F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72D02AAC-7F1D-4344-8174-3069B250817F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72D02AAC-7F1D-4344-8174-3069B250817F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72D02AAC-7F1D-4344-8174-3069B250817F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72D02AAC-7F1D-4344-8174-3069B250817F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
