@@ -13,25 +13,37 @@ namespace Laba15
             Second();
             Third();
             Fourth();
+            Fifth();
             
-            /*int counter = 1;
-            TimerCallback timerCallback = new TimerCallback(WhatTimeIsIt);
-            var timer = new Timer(timerCallback, null, 0, 1000);
-            Thread.Sleep(5000);
-            
-
-            // 5. Придумайте и реализуйте повторяющуюся задачу на основе класса Timer
-            // Задача : считаем секунды 
-            // TODO нелепая задача,но я не знаю,как остановить таймер 
-            void WhatTimeIsIt(object obj)
-            {
-                Console.WriteLine(counter);
-                counter++;
-            }*/
+            //TODO Повышенный уровень,если не лень будет
+          
             
             
           
         }
+
+        private static void Fifth()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            // 5. Придумайте и реализуйте повторяющуюся задачу на основе класса Timer
+            Console.WriteLine();
+            int counter = 1;
+            TimerCallback timerCallback = new TimerCallback(WhatTimeIsIt);
+            var timer = new Timer(timerCallback,null, 0, 1000);
+            Thread.Sleep(5000);
+            timer.Change(Timeout.Infinite, 2000);
+
+            void WhatTimeIsIt(object obj)
+            {
+                Console.WriteLine(counter);
+                counter++;
+            }
+           
+            
+        
+           
+        }
+      
 
         private static void Fourth()
         {
@@ -58,8 +70,8 @@ namespace Laba15
             var mutex = new Mutex();
             var even = new Thread(ShowEvenNumbers);
             var odd = new Thread(ShowOddNumbers);
-            even.Start();
             odd.Start();
+            even.Start();
             even.Join();
             odd.Join();
 
