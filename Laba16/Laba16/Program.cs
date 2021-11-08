@@ -97,12 +97,14 @@ namespace Laba16
             1) C ContinueWith - планировка на основе завершения множества
             предшествующих задач
             2) На основе объекта ожидания и методов GetAwaiter(),GetResult();*/
+            
 
             var sum = new Task<int>(() => 1 + 10 + 100);
             var showSum = sum.ContinueWith(s => Console.WriteLine(sum.Result));
             sum.Start();
 
 
+            //TODO ниже бредовый код,но я не знаю,как именно это должно работать
             var difference = new Task<int>(() => 111 - 100 - 10 - 1);
             var awaiterCountFor = difference.GetAwaiter();
             awaiterCountFor.OnCompleted(() =>
